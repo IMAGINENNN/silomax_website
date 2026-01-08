@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "San Francisco", apple-system;
+    color: black;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.masthead {
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: min(96%, 1140px);
+    margin: 0 auto;
+    /* to center the container horizontally */
+}
+
+.primary-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: rgba(127, 18, 141, 0.788);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.nav-links li a:hover {
+    color: rgba(127, 18, 141, 0.459);
+}
+
+.container-grid {
+    display: grid;
+    gap: 1.5em;
+    min-width: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.item {
+    border: 1px solid black;
+    text-align: center;
+}
