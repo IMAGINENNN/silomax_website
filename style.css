@@ -22,6 +22,15 @@ html, body {
     padding: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 .masthead {
     background-color: rgba(245, 245, 245, 0.9);
     padding: 1rem 0;
@@ -61,6 +70,10 @@ html, body {
     color: rgba(127, 18, 141, 0.459);
 }
 
+main {
+    flex: 1;
+}
+
 .container-grid {
     display: grid;
     gap: 1.5em;
@@ -76,4 +89,57 @@ html, body {
 .item {
     border: 1px solid black;
     text-align: center;
+}
+
+.item-product{
+    height: 450px;
+    width: 450px;
+}
+
+.item-image img {
+    width: 100%;
+    height: auto;
+}
+
+.container-item {
+    display: flex;;
+    align-items: center;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: rgba(255, 255, 255, 0.829);
+    color: rgba(0, 0, 0, 0.9);
+    border: solid 1px rgba(35, 64, 226, 0.829);
+    border-radius: .4em;
+    font-weight: lighter;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    margin: 1em 1em 1em 1em;
+}
+
+.btn-primary:hover {
+    background-color: rgb(35, 64, 226);
+    color: white;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.main-footer {
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 1rem 0;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.6);
 }
