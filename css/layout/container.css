@@ -22,7 +22,14 @@
 .container-item-text {
     display: flex;
     flex-direction: column;
+
     align-items: flex-start;
+
+    gap: 0.8rem;
+
+    margin-top: auto;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
 }
 
 .container-feedBack {

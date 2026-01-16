@@ -10,14 +10,9 @@
         padding-block: 1em 0em;
         padding-inline: 1em;
     }
-
-    .item-image {
-        width: 90%;
-    }
     
     .item-name {
         font-size: 1.7em;
-        margin-block: 1em 0.2em;
     }
     
     .item-description li {
@@ -40,12 +35,10 @@
         height: 440px;
         width: 400px;
 
-        padding-inline: 0.5em;
         padding-block: 1em 0em;
     }
 
     .item-description {
-        margin-left: 3em;
         font-size: 0.9em;
     }
 }
@@ -64,12 +57,9 @@
 
     .item-name {
         font-size: 1.5em;
-        margin-block: 1em 0.2em;
-        margin-inline: 0.3em;
     }
 
     .item-description {
-        margin-left: 2em;
         font-size: 0.8em;
     }
 }
@@ -84,19 +74,12 @@
         width: 360px;
     }
 
-    .item-image {
-        width: 90%;
-    }
-
     .item-name {
-        font-size: 1.3em;
-        margin-block: 0.8em 0.2em;
-        margin-inline: 0.3em;
+        font-size: 1.4em;
     }
 
     .item-description {
-        margin-left: 2em;
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     .item-button {
