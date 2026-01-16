@@ -1,24 +1,3 @@
-.item-button {
-    margin-block: 1.5em;
-    height: 35px;
-    width: 100px;
-
-    background-color: rgba(255, 255, 255, 0.829);
-    color: rgba(0, 0, 0, 0.9);
-    border: solid 1px rgba(35, 64, 226, 0.829);
-    border-radius: .4em;
-
-    font-weight: lighter;
-    font-size: 1em;
-
-    align-self: center;
-}
-
-.item-button:hover {
-    background-color: rgb(35, 64, 226);
-    color: white;
-}
-
 .btn:hover {
     cursor: pointer;
 }

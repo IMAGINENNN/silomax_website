@@ -1,4 +1,8 @@
 @media (max-width: 1480px) {
+    .carousel {
+        gap: 2em;
+    }
+
     .carousel::scroll-button(right), .carousel::scroll-button(left) {
         height: 50px;
         width: 50px;
@@ -6,9 +10,17 @@
     }
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+    .carousel {
+        gap: 1.3em;
+    }
+}
 
-@media (max-width: 910px) {}
+@media (max-width: 910px) {
+    .carousel {
+            gap: 0.8em;
+        }
+}
 
 @media (max-width: 798px) {
     .carousel::scroll-button(right), .carousel::scroll-button(left) {

@@ -1,5 +1,5 @@
 @media (max-width: 1480px) {
-    .nav-links li a, .nav-links li img {
+    .nav-links li a, .primary-nav img {
         font-size: 1.2rem;
         height: 60px;
     }
@@ -7,7 +7,7 @@
 
 @media (max-width: 1200px) {
     .nav-links li a,
-        .nav-links li img {
+        .primary-nav img {
             font-size: 1rem;
             height: 50px;
         }
@@ -17,7 +17,7 @@
 
 @media (max-width: 798px) {
     .nav-links li a,
-        .nav-links li img {
+        .primary-nav img {
             font-size: 1rem;
             height: 50px;
         }
