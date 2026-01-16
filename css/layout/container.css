@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+
+.container-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+    margin-block: 50px 40px;
+}
+
+.container-item-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container-feedBack {
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+}

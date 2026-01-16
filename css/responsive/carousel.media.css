@@ -1,0 +1,17 @@
+@media (max-width: 1480px) {
+    .carousel::scroll-button(right), .carousel::scroll-button(left) {
+        height: 50px;
+        width: 50px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 910px) {}
+
+@media (max-width: 798px) {
+    .carousel::scroll-button(right), .carousel::scroll-button(left) {
+        background: linear-gradient(500deg, #bb42eb, #633c66);
+    }
+}

@@ -1,0 +1,27 @@
+.item-image {
+    align-self: center;
+
+    margin: 1em;
+
+    width: 85%;
+    height: auto;
+}
+
+.item-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-inline: 2em;
+    margin-block: 2em 0.2em;
+}
+
+.item-description {
+    margin-block: 1em;
+    margin-left: 5em;
+    padding: 0;
+    color: rgb(0, 0, 0);
+}
+
+.item-description li {
+    font-size: 1.2em;
+    font-weight: normal;
+}
