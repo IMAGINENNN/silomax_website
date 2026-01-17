@@ -1,6 +1,13 @@
 .masthead {
-    background-color: var(--bg);
-    padding: 1rem 0;
+    background: linear-gradient(180deg, rgba(111, 114, 117, 0.55), rgba(100, 100, 102, 0.35));
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+    padding-block: 1rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .primary-nav {
@@ -12,21 +19,65 @@
 .nav-links {
     display: flex;
     list-style: none;
+
+    gap: 10px;
+
     margin: 0;
     padding: 0;
 }
 
-.nav-links li {
-    margin-left: 10px;
-}
-
 .nav-links li a {
     text-decoration: none;
-    color: rgba(127, 18, 141, 0.788);
+    color: hsl(309, 41%, 40%);
+
     font-weight: bold;
     font-size: 1.25rem;
+
+    transition: 0.2s;
 }
 
 .nav-links li a:hover {
-    color: rgba(127, 18, 141, 0.459);
+    text-shadow: 0 0 10px rgba(127, 18, 141, 0.6)
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+
+    height: clamp(40px, 6vw, 45px);
+    width: clamp(40px, 6vw, 45px);
+
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: white;
+    position: relative;
+    content: "";
+    transition: transform 0.25s ease, top 0.25s ease,
+    background 0.25s ease;
+    transform-origin: center;
+}
+
+.hamburger span::before {
+    position: absolute;
+    top: -6px;
+}
+
+.hamburger span::after {
+    position: absolute;
+    top: 6px;
 }
