@@ -1,5 +1,5 @@
 .masthead {
-    background: linear-gradient(180deg, rgba(111, 114, 117, 0.55), rgba(100, 100, 102, 0.35));
+    background: linear-gradient(180deg, rgba(216, 216, 216, 0.55), rgba(209, 209, 209, 0.35));
     backdrop-filter: blur(12px);
 
     border-bottom: 1px solid rgba(255, 255, 255, .12);
@@ -53,7 +53,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgb(119, 116, 116);
     background: rgba(255, 255, 255, 0.06);
     cursor: pointer;
 }
@@ -64,7 +64,7 @@
     display: block;
     width: 18px;
     height: 2px;
-    background: white;
+    background: rgb(119, 116, 116);
     position: relative;
     content: "";
     transition: transform 0.25s ease, top 0.25s ease,

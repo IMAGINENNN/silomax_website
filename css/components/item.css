@@ -14,25 +14,37 @@
     font-weight: bold;
 }
 
+.item-title-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.item-banner {
+    padding: 5px;
+
+    background: linear-gradient(180deg, rgba(207, 162, 78, 0.185), rgba(214, 189, 80, 0.219));
+    backdrop-filter: blur(12px);
+    border-radius: 9px;
+
+    font-size: 0.8rem;
+    color: rgba(207, 162, 78, 1);
+}
+
 .item-description {
     padding: 0;
     margin: 0;
-    
-    display: flex;
-    flex-direction: column;
+
     gap: 0.1rem;
     
     color: var(--text-muted);
+
+    list-style: disc;
 }
 
 .item-description li {
     font-size: 1.2em;
     font-weight: normal;
-
-    display: flex;
-    flex-direction: column;
-
-    list-style: none;
 }
 
 .item-button {
