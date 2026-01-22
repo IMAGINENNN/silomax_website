@@ -10,74 +10,165 @@
     z-index: 1000;
 }
 
-.primary-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-
-    gap: 10px;
-
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: hsl(309, 41%, 40%);
-
-    font-weight: bold;
-    font-size: 1.25rem;
-
-    transition: 0.2s;
-}
-
-.nav-links li a:hover {
-    text-shadow: 0 0 10px rgba(127, 18, 141, 0.6)
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-
-    height: clamp(40px, 6vw, 45px);
-    width: clamp(40px, 6vw, 45px);
-
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    border: 1px solid rgb(119, 116, 116);
-    background: rgba(255, 255, 255, 0.06);
-    cursor: pointer;
-}
-
-.hamburger span,
-.hamburger span::before,
-.hamburger span::after {
-    display: block;
-    width: 18px;
-    height: 2px;
-    background: rgb(119, 116, 116);
+.nav-wrap {
+    border: 1px solid var(--gray);
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 500px;
     position: relative;
-    content: "";
-    transition: transform 0.25s ease, top 0.25s ease,
-    background 0.25s ease;
-    transform-origin: center;
+    box-shadow: inset 10px 0 10px rgb(191, 116, 201);
+    background: linear-gradient(0deg, #502275, #242424);
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: -5px;
+        background: linear-gradient(180deg,#7e797977, #a19f9f77);
+        border-radius: 500px;
+        z-index: -1;
+    }
 }
 
-.hamburger span::before {
-    position: absolute;
-    top: -6px;
+.nav {
+    width: fit-content;
+    anchor-name: --nav;
+    margin: 6.7px;
+
+    a {
+        z-index: 10;
+        position: relative;
+        display: inline-block;
+        padding: 7px 7px;
+        color: white;
+        text-decoration: none;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            opacity: 0.2;
+        }
+
+        &.active {
+            anchor-name: --active;
+            color: black;
+        }
+
+        &:hover:before {
+            anchor-name: --nav;
+        }
+    }
 }
 
-.hamburger span::after {
+.bubble {
+    background: white;
+    /* z-index: 5; */
+    top: anchor(top);
+    right: anchor(right);
+    bottom: anchor(bottom);
+    left: anchor(left);
     position: absolute;
-    top: 6px;
+    transition: all 0.2s;
+    border-radius: 500px;
+
+    &.active {
+        position-anchor: --active;
+        z-index: 2;
+        background: linear-gradient(180deg, #f2f2f2, #b3b3b3);
+        box-shadow: inset 0 2px 7px #fff;
+    }
+
+    &.hover {
+        z-index: 1;
+        background: linear-gradient(180deg, var(--gray), #8d8a8a3b);
+        box-shadow: inset 0 2px 7px #ffffff29;
+        position-anchor: --nav;
+    }
+}
+
+.target {
+    position: relative;
+    z-index: -1;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --black: #a89e9e;
+    --gray: #3f3f3f;
+    --white: #fff;
 }
