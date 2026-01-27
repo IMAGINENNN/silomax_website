@@ -1,0 +1,21 @@
+@media (max-width: 1480px) {
+
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 910px) {
+    .faq-item-question {
+        font-size: 1rem;
+    }
+
+    .faq-item-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 798px) {
+
+}
