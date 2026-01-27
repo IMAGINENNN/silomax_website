@@ -21,23 +21,33 @@
     border-bottom: 1px solid black;
 }
 
-.faq-item:hover::after {
+.faq-item::after {
     content: "";
-    background: var(--card-gradient);
-    border-radius: 100px;
-    height: 4px;
-    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: 100ms;
+
+    height: 4px;
+    width: 100%;
+    background: var(--card-gradient);
+    border-radius: 100px;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 200ms ease;
 }
 
-.faq-item:hover {
+.faq-item:hover::after,
+.faq-item.active::after {
+    transform: scaleX(1);
+}
+
+.faq-item:hover,
+.faq-item.active {
     border-bottom: 0;
 
     padding-inline: 10px;
-    transition: 400ms;
+    transition: padding-inline 400ms ease, border-bottom-color 400ms ease;
 }
 
 .faq-item-header {
