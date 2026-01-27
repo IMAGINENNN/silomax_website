@@ -21,6 +21,10 @@
     border-bottom: 1px solid black;
 }
 
+.faq-item:last-child {
+    border-bottom: 0;
+}
+
 .faq-item::after {
     content: "";
     position: absolute;
@@ -50,6 +54,12 @@
     transition: padding-inline 400ms ease, border-bottom-color 400ms ease;
 }
 
+.faq-item:hover .faq-item-image,
+.faq-item.active .faq-item-image {
+    filter: drop-shadow(0 0 5px rgba(47, 26, 48, 0.541));
+    transform: scale(1.02);
+}
+
 .faq-item-header {
     display: flex;
 
@@ -66,6 +76,9 @@
     width: auto;
     object-fit: contain;
     flex: 0 0 auto;
+
+    transition: filter 250ms ease, transform 250ms ease;
+    filter: none;
 }
 
 .faq-item-question {
