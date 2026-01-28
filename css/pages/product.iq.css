@@ -1,0 +1,40 @@
+.section-product-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: auto;
+
+    background-image: url("../../data/images/bg_2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.product-header {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+
+    margin-block: 150px auto;
+}
+
+.product-header p {
+    color: rgb(243, 250, 255);
+    font-weight: bold; 
+
+    margin: 5px;
+    filter: drop-shadow(0 0 3px rgba(49, 49, 49, 0.596));
+}
+
+.product-header-main {
+    font-size: 3rem;
+}
+
+.product-header-second {
+    font-size: 1.1rem;
+}
