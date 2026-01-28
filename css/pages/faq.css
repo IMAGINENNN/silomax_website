@@ -50,7 +50,7 @@
 
 .faq-item:hover,
 .faq-item.active {
-    border-bottom: 0;
+    border-bottom-color: transparent;
 
     padding-inline: 10px;
     transition: padding-inline 400ms ease, border-bottom-color 400ms ease;
