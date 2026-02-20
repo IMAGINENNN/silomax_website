@@ -153,3 +153,53 @@
 .item:hover .item-text{
     margin-inline: 13%;
 }
+
+.carousel-1 {
+    margin: 100px auto;
+
+    height: auto;
+    width: 95%;
+
+    border: 1px solid rgb(48, 48, 48);
+
+    display: flex;
+
+    overflow-x: auto;
+}
+
+.carousel-1::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    padding-right: 1em;
+
+    animation: spin 55s linear infinite;
+}
+
+.group-card {
+    flex: 0 0 5em;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+.group-card-image {
+    width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+    to {
+        translate: -100%;
+    }
+}
