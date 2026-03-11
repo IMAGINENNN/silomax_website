@@ -10,7 +10,7 @@
     }
 
     .item-product {
-        height: 500px;
+        height: 550px;
         width: 440px;
 
         padding-block: 1em 0em;
@@ -42,15 +42,6 @@
     .grid-header {
         font-size: 1.5rem;
     }
-
-    .item-product {
-        height: 440px;
-        width: 400px;
-    }
-
-    .item-description {
-        font-size: 0.9em;
-    }
 }
 
 @media (max-width: 910px) {
@@ -65,19 +56,6 @@
     .grid-header {
         font-size: 1.3rem;
     }
-
-    .item-product {
-        height: 400px;
-        width: 340px;
-    }
-
-    .item-name {
-        font-size: 1.5em;
-    }
-
-    .item-description {
-        font-size: 0.8em;
-    }
 }
 
 @media (max-width: 798px) {
@@ -86,7 +64,7 @@
     }
 
     .item-product {
-        height: 400px;
+        height: 470px;
         width: 360px;
     }
 

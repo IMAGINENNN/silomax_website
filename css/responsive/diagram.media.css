@@ -1,0 +1,41 @@
+@media (max-width: 1480px) {
+
+}
+
+@media (max-width: 1200px) {
+    .diagram {
+        width: 600px;
+
+        border-radius: 30px;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 910px) {
+    .diagram {
+        width: 550px;
+    
+        border-radius: 30px;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 798px) {
+    .diagram {
+        width: 400px;
+    
+        border-radius: 30px;
+
+        margin-block: 2rem;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+}
