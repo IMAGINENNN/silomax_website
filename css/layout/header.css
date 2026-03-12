@@ -29,6 +29,10 @@
     padding: 0;
 }
 
+.stabil-line .nav-links li a {
+    color: hsl(221, 80%, 61%);
+}
+
 .nav-links li a {
     text-decoration: none;
     color: hsl(294, 45%, 35%);
@@ -45,6 +49,12 @@
 
 .nav-links li a:hover {
     color: hsl(294, 25%, 39%);
+    text-shadow: 0 0 8px hsl(294, 25%, 39%);
+}
+
+.stabil-line .nav-links li a:hover {
+    color: hsl(221, 80%, 61%);
+    text-shadow: 0 0 8px hsl(221, 80%, 61%);
 }
 
 .nav-links li a:active {
