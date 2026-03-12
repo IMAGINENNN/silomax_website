@@ -1,0 +1,16 @@
+.stabil::after,
+.stabil::before {
+    background-image: conic-gradient(from var(--angle), transparent 10%, hsl(221, 80%, 61%));
+}
+
+.blue {
+    color: hsl(221, 80%, 61%);
+}
+
+.stabil-line .instruction-box:first-child {
+    border-right: 3px solid hsl(221, 80%, 61%);
+}
+
+.stabil-line .instruction-box:first-child::after {
+    background: hsl(221, 80%, 61%);
+}

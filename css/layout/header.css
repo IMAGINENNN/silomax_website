@@ -44,7 +44,7 @@
 }
 
 .nav-links li a:hover {
-    color: hsla(294, 45%, 35%, 0.87);
+    color: hsl(294, 25%, 39%);
 }
 
 .nav-links li a:active {
