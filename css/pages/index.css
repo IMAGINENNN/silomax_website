@@ -59,20 +59,22 @@
 .item {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
 
     height: 400px;
     width: 400px;
 
-    margin-bottom: auto;;
+    margin-bottom: auto;
 
     backdrop-filter: blur(2px);
-
     background: linear-gradient(180deg, rgba(216, 216, 216, 0.466), rgba(61, 59, 62, 0.349));
-    
+
     border: 1px solid rgba(255, 255, 255, .12);
     border-radius: 0.9rem;
+
+    text-decoration: none;
+    color: inherit;
+    position: relative;
 }
 
 .image {

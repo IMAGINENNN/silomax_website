@@ -18,6 +18,10 @@
     justify-content: space-between;
 }
 
+.stabil-line .primary-nav img {
+    height: 60px;
+}
+
 .nav-links {
     display: flex;
     align-items: center;

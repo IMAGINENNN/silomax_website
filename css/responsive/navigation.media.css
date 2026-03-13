@@ -1,5 +1,5 @@
 @media (max-width: 1480px) {
-    .nav-links li a, .primary-nav img {
+    .nav-links li a, .primary-nav img, .stabil-line .primary-nav img {
         font-size: 1.4rem;
         height: 60px;
     }
@@ -7,7 +7,7 @@
 
 @media (max-width: 1200px) {
     .nav-links li a,
-        .primary-nav img {
+        .primary-nav img .stabil-line .primary-nav img {
             font-size: 1.2em;
             height: 50px;
         }
