@@ -53,24 +53,50 @@
     font-size: 1.5rem;
 }
 
-.item-product {
-    display: flex;
-    flex-direction: column;
+.item-home {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
 
-    justify-content: center;
-
-    height: 400px;
-    width: 400px;
-
-    margin-bottom: auto;;
-    
-    border-right: 2px solid rgba(0, 0, 0, 0.12);
+    position: relative;
 }
 
-.item-product:last-child {
+.item-home:last-child {
     border-right: none;
 
     border-left: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.item-home:last-child::after {
+    left: 0;
+}
+
+.item-home:hover:last-child::after {
+    background: var(--card-gradient-blue);
+
+    filter: drop-shadow(5px 0 3px rgba(105, 139, 233, 0.788));
+}
+
+.item-home::after {
+    content: "";
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    height: 100%;
+    width: 4px;
+
+    background: var(--card-gradient);
+    border-radius: 100px;
+
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 200ms ease;
+}
+
+.item-home:hover::after {
+    transform: scaleY(1);
+
+    filter: drop-shadow(-5px 0 3px rgba(209, 117, 214, 0.788));
 }
 
 .image {

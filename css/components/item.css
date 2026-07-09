@@ -71,8 +71,15 @@
     color: white;
 }
 
-.item-product {
+.item {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
     text-align: left;
+
+    margin-block: auto;
 
     padding-block: 3em 0em;
     padding-inline: 3em;

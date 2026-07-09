@@ -11,4 +11,5 @@
     /* Borders / UI */
     --border-subtle: hsl(0 0% 85%);
     --card-gradient: linear-gradient(500deg, #b700ff, #5b0a63);
+    --card-gradient-blue: linear-gradient(500deg, #3e46b9, #555cbb);
 }

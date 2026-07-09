@@ -1,15 +1,10 @@
 @media (max-width: 1480px) {
-    
-    .grid-item {
-        padding-block: 1em 0em;
-        padding-inline: 1em;
-    }
 
     .grid-header {
         font-size: 1.8rem;
     }
 
-    .item-product {
+    .item {
         height: 550px;
         width: 440px;
 
@@ -35,7 +30,7 @@
         gap: 2em;
     }
 
-    .grid-item {
+    .item {
         padding-block: 1em 0em;
     }
 
@@ -49,7 +44,7 @@
         gap: 1.5em;
     }
 
-    .grid-item {
+    .item {
         padding-inline: 1em;
     }
 
