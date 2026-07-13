@@ -3,14 +3,6 @@
     .grid-header {
         font-size: 1.8rem;
     }
-
-    .item {
-        height: 550px;
-        width: 440px;
-
-        padding-block: 1em 0em;
-        padding-inline: 1em;
-    }
     
     .item-name {
         font-size: 1.7em;

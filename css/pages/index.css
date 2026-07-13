@@ -12,10 +12,6 @@
     background-size: cover;
 }
 
-.section-2 {
-    background-image: none;
-}
-
 .container-products {
     display: flex;
     flex-direction: row;
@@ -140,4 +136,39 @@
 
 .item:hover .image {
     transform: scale(1.08);
+}
+
+.section-2 {
+    flex-direction: row;
+
+    gap: 10px;
+}
+
+.carousel-item {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 580px;
+
+    padding: 1px;
+}
+
+.side-item {
+    width: 25%;
+
+    opacity: 0.5;
+}
+
+.main-item {
+    opacity: 1;
+}
+
+.carousel-item-image {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 1em;
 }

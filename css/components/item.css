@@ -81,11 +81,11 @@
 
     margin-block: auto;
 
-    padding-block: 3em 0em;
-    padding-inline: 3em;
-
-    height: 700px;
-    width: 600px;
+    height: 550px;
+    width: 440px;
+    
+    padding-block: 1em 0em;
+    padding-inline: 1em;
 }
 
 .item-instruction {
