@@ -139,30 +139,31 @@
 }
 
 .section-2 {
-    flex-direction: row;
+    position: relative;
 
-    gap: 10px;
+    height: 400px;
+    width: 100%
 }
 
 .carousel-item {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 580px;
-
-    padding: 1px;
+    flex-shrink: 0;
+    
+    transition: transform 400ms ease, opacity 400ms ease;
 }
 
 .side-item {
-    width: 25%;
+    width: 380px;
 
     opacity: 0.5;
 }
 
 .main-item {
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2;
     opacity: 1;
 }
 
@@ -171,4 +172,31 @@
     width: 100%;
     object-fit: contain;
     border-radius: 1em;
+}
+
+.left-item {
+    transform: translate(-120%, -50%) scale(0.85);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.right-item {
+    transform: translate(20%, -50%) scale(0.85);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.carousel-btn-left {
+    left: 20px;
+}
+
+.carousel-btn-right {
+    right: 20px;
 }
