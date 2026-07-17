@@ -1,38 +1,38 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    const images = [
-    "/data/images/feedBack_images/feedBack_1.png",
-    "/data/images/feedBack_images/feedBack_2.png",
-    "/data/images/feedBack_images/feedBack_3.png",
-    "/data/images/feedBack_images/feedBack_4.png",
-    "/data/images/feedBack_images/feedBack_5.png",
-    "/data/images/feedBack_images/feedBack_6.png",
-    "/data/images/feedBack_images/feedBack_7.png"
-    ]
+    const cards = document.querySelectorAll(".carousel-item");
+    let currentIndex = 1;
 
-    let currentIndex = 2;
+    function getOffset(cardIndex, currentIndex, total) {
+        let offset = cardIndex - currentIndex;
+        if (offset > total / 2) offset -= total;
+        if (offset < -total / 2) offset += total;
+        return offset;
+    }
 
-    function wrap(idnex, length) {
-    return (idnex + length) % length;
+    function classForOffset(offset) {
+        if (offset === 0) return "main-item";
+        if (offset === -1) return "side-item left-item";
+        if (offset === 1) return "side-item right-item";
+        return "hidden-item";
     }
 
     function updateCarousel() {
-        const leftImg = images[wrap(currentIndex - 1, images.length)];
-        const mainImg = images[currentIndex];
-        const rightImg = images[wrap(currentIndex + 1, images.length)];
+        cards.forEach(card => {
+            const cardIndex = parseInt(card.dataset.index, 10);
+            const offset = getOffset(cardIndex, currentIndex, cards.length);
 
-        document.querySelector(".left-item img").src = leftImg;
-        document.querySelector(".main-item img").src = mainImg;
-        document.querySelector(".right-item img").src = rightImg;
+            card.classList.remove("main-item", "side-item", "left-item", "right-item", "hidden-item");
+            card.classList.add(...classForOffset(offset).split(" "));
+        });
     }
 
     document.querySelector(".carousel-btn-right").addEventListener("click", () => {
-        currentIndex = wrap(currentIndex + 1, images.length);
+        currentIndex = (currentIndex + 1) % cards.length;
         updateCarousel();
     });
 
     document.querySelector(".carousel-btn-left").addEventListener("click", () => {
-        currentIndex = wrap(currentIndex - 1, images.length);
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
         updateCarousel();
     });
 });
