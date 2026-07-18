@@ -5,6 +5,20 @@
     padding-inline: 16px;
 }
 
+.section-product-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: auto;
+
+    background-position: center center;
+    background-size: cover;
+}
+
 .container-products {
     display: flex;
     flex-direction: column;

@@ -1,15 +1,8 @@
-.section-product-container {
-    display: flex;
-    flex-direction: column;
+.section-feedback {
+    position: relative;
 
-    justify-content: center;
-    align-items: center;
-
-    height: 100vh;
-    width: auto;
-
-    background-position: center center;
-    background-size: cover;
+    height: 400px;
+    width: 100%
 }
 
 .container-products {
@@ -136,13 +129,6 @@
 
 .item:hover .image {
     transform: scale(1.08);
-}
-
-.section-2 {
-    position: relative;
-
-    height: 400px;
-    width: 100%
 }
 
 .carousel-item {
