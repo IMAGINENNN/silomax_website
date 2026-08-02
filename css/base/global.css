@@ -17,9 +17,17 @@ body {
     flex-direction: column;
     overflow-x: hidden;
 
+    box-sizing: border-box;
+    font-family: "San Francisco", apple-system;
+    color: var(--text);
+
     background-color: var(--bg-dark);
 }
 
 main {
     flex: 1;
+}
+
+.btn:hover {
+    cursor: pointer;
 }

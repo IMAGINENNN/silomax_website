@@ -1,16 +1,11 @@
 @media (max-width: 1480px) {
     .nav-links li a, .primary-nav img {
-        font-size: 1.4rem;
-        height: 60px;
+        height: 2rem;
     }
 }
 
 @media (max-width: 1200px) {
-    .nav-links li a,
-        .primary-nav img {
-            font-size: 1.2em;
-            height: 50px;
-        }
+    
 }
 
 @media (max-width: 910px) {}

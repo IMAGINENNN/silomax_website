@@ -17,8 +17,7 @@
                 <a href="index.html">
                     <img src="data/images/silomax_logo.png" alt="Silomax Logo">
                 </a>
-
-                <!-- Hamburger menu -->
+                
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
                 <label for="menu-toggle" class="hamburger">
                     <span></span>
@@ -34,7 +33,7 @@
         </div>
     </header>
     <main>
-        <section class="section-product-container section-1">
+        <section class="container container-elements">
             <div class="product-header">
                 <p class="product-header-main">
                     Mer melk og kjøtt fra gårdens egne ressurser
@@ -43,16 +42,16 @@
                     Bevist pålitelig under reelle norske forhold i en årrekke. Støttet av vitenskap
                 </p>
             </div>
-            <div class="container container-products">
+            <div class="container-products">
                 <div class="item item-home">
-                    <img class="image image-item image-product" alt="silomax_iq_image"
+                    <img class="image item-image-home" alt="silomax_iq_image"
                         src="data/images/product_images/silomax_iq_transparent.jpg">
                     <div class="item-text text-iq">
                         <p>IQ</p>
                     </div>
                 </div>
                 <div class="item item-home">
-                    <img class="image image-item image-product" alt="silomax_stabil_image"
+                    <img class="image item-image-home" alt="silomax_stabil_image"
                         src="data/images/product_images/silomax_stabil_transparent.jpg">
                     <div class="item-text text-stabil">
                         <p>STABIL</p>
@@ -60,33 +59,35 @@
                 </div>
             </div>
         </section>
-        <section class="section-product-container section-feedback">
-            <button class="btn carousel-btn carousel-btn-left" aria-label="Previous">&#10094;</button>
-
-            <div class="carousel-item side-item left-item" data-index="0">
-                <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_1.png" alt="feedback_1">
-            </div>
-
-            <div class="carousel-item main-item" data-index="1">
-                <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_2.png" alt="feedback_2">
-            </div>
-
-            <div class="carousel-item side-item right-item" data-index="2">
-                <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_3.png" alt="feedback_3">
-            </div>
-
-            <button class="btn carousel-btn carousel-btn-right" aria-label="Next">&#10095;</button>
-
-            <div class="carousel-item hidden-item" data-index="3">
-                <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_4.png" alt="feedback_4">
-            </div>
-
-            <div class="carousel-item hidden-item" data-index="4">
-                <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_5.png" alt="feedback_5">
-            </div>
-
-            <div class="carousel-item hidden-item" data-index="5">
-                <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_6.png" alt="feedback_6">
+        <section class="container">
+            <div class="container-feedback">
+                <button class="btn carousel-btn carousel-btn-left" aria-label="Previous">&#10094;</button>
+                
+                <div class="carousel-item side-item left-item" data-index="0">
+                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_1.png" alt="feedback_1">
+                </div>
+                
+                <div class="carousel-item main-item" data-index="1">
+                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_2.png" alt="feedback_2">
+                </div>
+                
+                <div class="carousel-item side-item right-item" data-index="2">
+                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_3.png" alt="feedback_3">
+                </div>
+                
+                <button class="btn carousel-btn carousel-btn-right" aria-label="Next">&#10095;</button>
+                
+                <div class="carousel-item hidden-item" data-index="3">
+                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_4.png" alt="feedback_4">
+                </div>
+                
+                <div class="carousel-item hidden-item" data-index="4">
+                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_5.png" alt="feedback_5">
+                </div>
+                
+                <div class="carousel-item hidden-item" data-index="5">
+                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_6.png" alt="feedback_6">
+                </div>
             </div>
         </section>
     </main>
