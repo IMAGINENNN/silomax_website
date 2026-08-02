@@ -9,27 +9,19 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="carousel.js"></script>
 </head>
-
 <body>
     <header class="masthead">
-        <div class="container">
-            <nav class="primary-nav">
-                <a href="index.html">
-                    <img src="data/images/silomax_logo.png" alt="Silomax Logo">
-                </a>
-                
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="hamburger">
-                    <span></span>
-                </label>
-
-                <ul class="nav-links">
-                    <li><a href="index.html">HJEM</a></li>
-                    <li><a href="iq.html">IQ</a></li>
-                    <li><a href="stabil.html">STABIL</a></li>
-                    <li><a href="faq.html">OSS</a></li>
-                </ul>
-            </nav>
+        <div class="container nav-container">
+            <div class="nav-wrap">
+                <div class="bubble active"></div>
+                <div class="bubble hover"></div>
+                <nav class="nav">
+                    <a class="active" href="/index.html">Home</a>
+                    <a href="/iq.html">Silomax IQ</a>
+                    <a href="/stabil.html">Silomax STABIL</a>
+                    <a href="/faq.html">FAQ</a>
+                </nav>
+            </div>
         </div>
     </header>
     <main>
@@ -50,13 +42,14 @@
                         <p>IQ</p>
                     </div>
                 </div>
-                <div class="item item-home">
-                    <img class="image item-image-home" alt="silomax_stabil_image"
-                        src="data/images/product_images/silomax_stabil_transparent.jpg">
-                    <div class="item-text text-stabil">
-                        <p>STABIL</p>
+                <div class="container-products">
+                    <div class="item item-home">
+                        <img class="image item-image-home" alt="silomax_stabil_image"
+                            src="data/images/product_images/silomax_stabil_transparent.jpg">
+                        <div class="item-text text-stabil">
+                            <p>STABIL</p>
+                        </div>
                     </div>
-                </div>
             </div>
         </section>
         <section class="container">
