@@ -1,7 +1,4 @@
 .masthead {
-    background: linear-gradient(180deg, rgba(216, 216, 216, 0.55), rgba(209, 209, 209, 0.35));
-    backdrop-filter: blur(12px);
-
     border-bottom: 1px solid rgba(255, 255, 255, .12);
     padding-block: 1rem;
 
@@ -18,8 +15,8 @@
     margin: 0 auto;
     border-radius: 500px;
     position: relative;
-    box-shadow: inset 10px 0 10px rgb(191, 116, 201);
-    background: linear-gradient(0deg, #502275, #242424);
+    box-shadow: inset 10px 0 10px rgb(220, 209, 221);
+    background: linear-gradient(90deg, #a252e390, #625dea90);
 
     &:after {
         content: "";

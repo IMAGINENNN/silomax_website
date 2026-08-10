@@ -112,6 +112,8 @@
     color: var(--text-muted);
     font-size: 1.5rem;
 
+    text-align: justify;
+
     max-height: 0;
 
     overflow: hidden;
@@ -119,6 +121,10 @@
 
     transform: translateY(-8px);
     transition: max-height .35s ease, opacity .25s ease, transform .25s ease;
+}
+
+.faq-item-text p {
+    margin-bottom: 1rem;
 }
 
 .faq-item.active .faq-item-text {
