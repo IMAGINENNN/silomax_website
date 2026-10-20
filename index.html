@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Silomax - Kontrollert ensilering fra gras til verdi.">
     <title>Silomax</title>
     <link rel="stylesheet" href="style.css">
@@ -17,77 +18,158 @@
                 <div class="bubble active"></div>
                 <div class="bubble hover"></div>
                 <nav class="nav">
-                    <a class="" href="/index.html">Home</a>
+                    <a class="" href="/index.html" data-i18n="nav.home">Home</a>
                     <a class="" href="/iq.html">IQ</a>
                     <a class="" href="/stabil.html">STABIL</a>
-                    <a class="" href="/faq.html">FAQ</a>
+                    <a class="" href="/faq.html" data-i18n="nav.faq">FAQ</a>
                 </nav>
             </div>
         </div>
+        <div class="nav-wrap lang-wrap">
+            <div class="bubble lang-bubble active"></div>
+            <div class="bubble lang-bubble hover"></div>
+            <nav class="nav lang-nav" aria-label="Language selector">
+                <a href="?lang=no" data-lang="no" class="active">NO</a>
+                <a href="?lang=en" data-lang="en">EN</a>
+            </nav>
+        </div>
     </header>
     <main>
-        <section class="container container-elements">
+        <section id="produkter" class="container container-elements">
             <div class="product-header">
-                <p class="product-header-main">
+                <span class="hero-badge" data-i18n="home.badge">Kontrollert ensilering</span>
+                <h1 class="product-header-main" data-i18n="home.title">
                     Mer melk og kjøtt fra gårdens egne ressurser
-                </p>
-                <p class="product-header-second">
-                    Bevist pålitelig under reelle norske forhold i en årrekke. Støttet av vitenskap
+                </h1>
+                <p class="product-header-second" data-i18n="home.subtitle">
+                    Bevist pålitelig under reelle norske forhold i en årrekke. Støttet av vitenskap.
                 </p>
             </div>
+
             <div class="container-products">
-                <div class="item item-home">
-                    <img class="image item-image-home" alt="silomax_iq_image"
-                        src="data/images/product_images/silomax_iq_transparent.jpg">
+                <div class="item item-home item-home-iq">
+                    <a href="/iq.html" class="product-img-link">
+                        <img class="image item-image-home item-image-home-iq" alt="Silomax IQ"
+                            src="data/images/product_images/silomax_iq_transparent.jpg">
+                    </a>
                     <div class="item-text text-iq">
-                        <p>IQ</p>
-                    </div>
-                </div>
-                <div class="container-products">
-                    <div class="item item-home">
-                        <img class="image item-image-home" alt="silomax_stabil_image"
-                            src="data/images/product_images/silomax_stabil_transparent.jpg">
-                        <div class="item-text text-stabil">
-                            <p>STABIL</p>
+                        <span class="item-banner" data-i18n="home.iq.dm">Tørrstoffprosent: 20 - 35%</span>
+                        <div class="home-actions">
+                            <a class="button Les-mer btn-iq" href="/iq.html" data-i18n="home.readMore">Les mer &rarr;</a>
+                            <a class="home-sublink" href="/iq.html#bruksanvisning" data-i18n="home.instructions">Bruksanvisning</a>
                         </div>
                     </div>
+                </div>
+
+                <div class="animation-line"></div>
+
+                <div class="item item-home item-home-stabil">
+                    <a href="/stabil.html" class="product-img-link">
+                        <img class="image item-image-home item-image-home-stabil" alt="Silomax STABIL"
+                            src="data/images/product_images/silomax_stabil_transparent.jpg">
+                    </a>
+                    <div class="item-text text-stabil">
+                        <span class="item-banner" data-i18n="home.stabil.dm">Tørrstoffprosent: 28 - 55%</span>
+                        <div class="home-actions">
+                            <a class="button Les-mer btn-stabil" href="/stabil.html" data-i18n="home.readMore">Les mer &rarr;</a>
+                            <a class="home-sublink" href="/stabil.html#bruksanvisning" data-i18n="home.instructions">Bruksanvisning</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="container">
-            <div class="container-feedback">
-                <button class="btn carousel-btn carousel-btn-left" aria-label="Previous">&#10094;</button>
-                
-                <div class="carousel-item side-item left-item" data-index="0">
-                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_1.png" alt="feedback_1">
+
+        <section id="tilbakemeldinger" class="section-feedback">
+            <div class="container">
+                <div class="feedback-header">
+                    <span class="hero-badge" data-i18n="home.feedback.badge">Resultater i praksis</span>
+                    <h2 class="feedback-title" data-i18n="home.feedback.title">Erfaringer fra norske gårdbrukere</h2>
+                    <p class="feedback-subtitle" data-i18n="home.feedback.subtitle">Se hva bønder over hele landet opplever med Silomax IQ og STABIL</p>
                 </div>
-                
-                <div class="carousel-item main-item" data-index="1">
-                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_2.png" alt="feedback_2">
-                </div>
-                
-                <div class="carousel-item side-item right-item" data-index="2">
-                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_3.png" alt="feedback_3">
-                </div>
-                
-                <button class="btn carousel-btn carousel-btn-right" aria-label="Next">&#10095;</button>
-                
-                <div class="carousel-item hidden-item" data-index="3">
-                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_4.png" alt="feedback_4">
-                </div>
-                
-                <div class="carousel-item hidden-item" data-index="4">
-                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_5.png" alt="feedback_5">
-                </div>
-                
-                <div class="carousel-item hidden-item" data-index="5">
-                    <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_6.png" alt="feedback_6">
+
+                <div class="container-feedback">
+                    <button class="btn carousel-btn carousel-btn-left" aria-label="Previous">&#10094;</button>
+                    
+                    <div class="carousel-item side-item left-item" data-index="0">
+                        <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_1.png" alt="Tilbakemelding 1">
+                    </div>
+                    
+                    <div class="carousel-item main-item" data-index="1">
+                        <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_2.png" alt="Tilbakemelding 2">
+                    </div>
+                    
+                    <div class="carousel-item side-item right-item" data-index="2">
+                        <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_3.png" alt="Tilbakemelding 3">
+                    </div>
+                    
+                    <button class="btn carousel-btn carousel-btn-right" aria-label="Next">&#10095;</button>
+                    
+                    <div class="carousel-item hidden-item" data-index="3">
+                        <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_4.png" alt="Tilbakemelding 4">
+                    </div>
+                    
+                    <div class="carousel-item hidden-item" data-index="4">
+                        <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_5.png" alt="Tilbakemelding 5">
+                    </div>
+                    
+                    <div class="carousel-item hidden-item" data-index="5">
+                        <img class="carousel-item-image" src="/data/images/feedback_images/feedBack_6.png" alt="Tilbakemelding 6">
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="main-footer">
         <div class="container footer-container">
-            <p>&copy; 2004 - 2026 Silomax. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="footer-logo" href="/index.html">
+                        <span class="footer-logo-dot"></span>
+                        SILOMAX
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer.tagline">
+                        Kontrollert ensilering fra gras til verdi. Bevist pålitelig under reelle norske forhold i en årrekke.
+                    </p>
+                    <div class="footer-badges">
+                        <span class="footer-badge" data-i18n="footer.badge1">EFSA-godkjent</span>
+                        <span class="footer-badge" data-i18n="footer.badge2">Økologisk godkjent</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="footer.products">Produkter</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="/iq.html#oversikt">
+                                <span class="product-dot product-dot-iq"></span>
+                                Silomax IQ
+                                <span class="footer-meta" data-i18n="footer.iqMeta">20–35% TS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/stabil.html#oversikt">
+                                <span class="product-dot product-dot-stabil"></span>
+                                Silomax STABIL
+                                <span class="footer-meta" data-i18n="footer.stabilMeta">28–55% TS</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="footer.links">Snarveier</h3>
+                    <ul class="footer-links">
+                        <li><a href="/index.html#produkter" data-i18n="footer.linkProducts">Produkter</a></li>
+                        <li><a href="/index.html#tilbakemeldinger" data-i18n="footer.linkFeedback">Erfaringer</a></li>
+                        <li><a href="/faq.html" data-i18n="footer.linkFaq">Ofte stilte spørsmål (FAQ)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2004 – 2026 Silomax. All rights reserved.</p>
+                <p class="footer-bottom-note" data-i18n="footer.note">Utviklet for norske forhold</p>
+            </div>
         </div>
     </footer>
 </body>

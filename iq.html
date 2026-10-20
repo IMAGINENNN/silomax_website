@@ -1,119 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Silomax - Kontrollert ensilering fra gras til verdi.">
-    <title>Silomax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Silomax IQ - Kontrollert ensilering fra gras til verdi.">
+    <title>Silomax - IQ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="header.js"></script>
     <script src="iq.js"></script>
 </head>
 
-<body>
+<body class="theme-iq">
     <header class="masthead">
         <div class="container nav-container">
             <div class="nav-wrap">
                 <div class="bubble active"></div>
                 <div class="bubble hover"></div>
                 <nav class="nav">
-                    <a class="" href="/index.html">Home</a>
+                    <a class="" href="/index.html" data-i18n="nav.home">Home</a>
                     <a class="" href="/iq.html">IQ</a>
                     <a class="" href="/stabil.html">STABIL</a>
-                    <a class="" href="/faq.html">FAQ</a>
+                    <a class="" href="/faq.html" data-i18n="nav.faq">FAQ</a>
                 </nav>
             </div>
         </div>
+        <div class="nav-wrap lang-wrap">
+            <div class="bubble lang-bubble active"></div>
+            <div class="bubble lang-bubble hover"></div>
+            <nav class="nav lang-nav" aria-label="Language selector">
+                <a href="?lang=no" data-lang="no" class="active">NO</a>
+                <a href="?lang=en" data-lang="en">EN</a>
+            </nav>
+        </div>
     </header>
     <main>
-        <section class="section-product-container section-products">
-        <div class="container item item-product item-iq">
-            <img class="image item-image-product fadeUp" src="data/images/product_images/silomax_iq_transparent.jpg" alt="Silomax IQ">
-            <div class="container-item-text">
-                <div class="item-title-row">
-                    <p class="item-name autoShow">Silomax IQ</p>
-                    <span class="item-banner autoShow">Tørrstoffprosent: 20 - 35%</span>
+        <section id="oversikt" class="section-product-container section-products">
+            <div class="container item item-product item-iq">
+                <div class="product-image-wrap fadeUp">
+                    <img class="image item-image-product" src="data/images/product_images/silomax_iq_transparent.jpg" alt="Silomax IQ">
                 </div>
-                <ul class="item-description autoShow">
-                    <li>Minst fyllstoff, unngå tette dyser og nedetid</li>
-                    <li>Rask og permanent senking av pH, hindrer feilgjæring</li>
-                    <li>Kan anvendes i økologisk produksjon</li>
-                    <li>Høyere proteinverdi og AAT</li>
-                    <li>Suveren smakelighet</li>
-                </ul>
-            </div>
-        </div>
-        </section>
-        <section class="section-product-container section-diagrams">
-            <div class="container container-diagram">
-                <p class="text diagram-text autoShow">
-                    En naturlig fermentering av gress kan ta fra 2-6 uker.<br></br>
-                    <span class="purple">SILOMAX IQ</span> vil fermentere gresset på <span class="purple">1-2 dager</span>.
-                </p>
-                <img class="diagram fadeUp" src="data/images/diagrams/diagrams_iq/diagram_iq_1_dark.png" alt="Silomax IQ">
-                <p class="text diagram-text autoShow">
-                    Forsøk viser at <span class="purple">SILOMAX IQ</span> kan erstatte 1,39kg kraftfôr, og <span class="purple">gir</span> 1,1 liter <span class="purple">mer melk</span> per dyr og dag mot kontroll.
-                </p>
+                <div class="container-item-text">
+                    <div class="item-title-row">
+                        <p class="item-name autoShow">Silomax <span class="purple">IQ</span></p>
+                        <span class="item-banner autoShow" data-i18n="iq.dm">Tørrstoffprosent: 20 - 35%</span>
+                    </div>
+                    <ul class="item-description autoShow">
+                        <li data-i18n="iq.b1">Minst fyllstoff, unngå tette dyser og nedetid</li>
+                        <li data-i18n="iq.b2">Rask og permanent senking av pH, hindrer feilgjæring</li>
+                        <li data-i18n="iq.b3">Kan anvendes i økologisk produksjon</li>
+                        <li data-i18n="iq.b4">Høyere proteinverdi og AAT</li>
+                        <li data-i18n="iq.b5">Suveren smakelighet</li>
+                    </ul>
+                    <div class="section-jump-links autoShow">
+                        <a class="jump-pill jump-pill-primary" href="#bruksanvisning" data-i18n="common.jumpInstructions">Bruksanvisning &darr;</a>
+                        <a class="jump-pill" href="#resultater" data-i18n="common.jumpResults">Forsøksresultater &darr;</a>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="section-product-container section-diagrams diagram-2">
+
+        <section id="resultater" class="section-product-container section-diagrams">
             <div class="container container-diagram">
-                <p class="text diagram-text autoShow">
-                    SILOMAX IQ <span class="purple">reduserer proteinnedbrytning</span> i ensilasje.
+                <p class="text diagram-text autoShow" data-i18n-html="iq.diag1.top">
+                    En naturlig fermentering av gress kan ta fra 2–6 uker.<br>
+                    <span class="purple">SILOMAX IQ</span> vil fermentere gresset på <span class="purple">1–2 dager</span>.
                 </p>
-                <img class="diagram fadeUp" src="data/images/diagrams/diagrams_iq/diagram_iq_2_dark.png" alt="Silomax IQ">
-                <p class="text diagram-text autoShow">
+                <div class="diagram-card fadeUp">
+                    <img class="diagram" src="data/images/diagrams/diagrams_iq/diagram_iq_1_dark.png" alt="Silomax IQ fermentering diagram">
+                </div>
+                <p class="text diagram-text autoShow" data-i18n-html="iq.diag1.bottom">
+                    Forsøk viser at <span class="purple">SILOMAX IQ</span> kan erstatte 1,39 kg kraftfôr, og <span class="purple">gir</span> 1,1 liter <span class="purple">mer melk</span> per dyr og dag mot kontroll.
+                </p>
+            </div>
+        </section>
+
+        <section id="effekt" class="section-product-container section-diagrams diagram-2">
+            <div class="container container-diagram">
+                <p class="text diagram-text autoShow" data-i18n-html="iq.diag2.top">
+                    <span class="purple">SILOMAX IQ</span> <span class="purple">reduserer proteinnedbrytning</span> i ensilasje.
+                </p>
+                <div class="diagram-card fadeUp">
+                    <img class="diagram" src="data/images/diagrams/diagrams_iq/diagram_iq_2_dark.png" alt="Silomax IQ proteinbevaring diagram">
+                </div>
+                <p class="text diagram-text autoShow" data-i18n-html="iq.diag2.bottom">
                     Mer protein <span class="purple">bevares</span> – <span class="purple">mer energi</span> og <span class="purple">melk</span> fra samme fôr.
                 </p>
             </div>
         </section>
-        <section class="section-product-container section-instruction">
-            <h1 class="container header instruction-header autoShow">
-                Bruksanvisning
-            </h1>
-            <div class="container-instruction-1">
-                <div class="item-instruction fadeUp">
-                    <div class="instruction-box">
-                        <img class="image instruction" src="data/images/Instruction/Instruction_1.png" alt="Silomax IQ">
-                    </div>
-                    <div class="instruction-box instruction-text">
-                        <p>Mål opp dose</p>
-                    </div>
+
+        <section id="bruksanvisning" class="section-product-container section-instruction">
+            <div class="container instruction-wrapper">
+                <div class="instruction-heading-group autoShow">
+                    <span class="instruction-badge" data-i18n="inst.badge">4 enkle steg</span>
+                    <h1 class="header instruction-header" data-i18n="inst.header">Bruksanvisning</h1>
+                    <p class="instruction-subtitle" data-i18n="iq.inst.subtitle">Slik klargjør og bruker du Silomax IQ for optimal ensilering</p>
                 </div>
-            
-                <div class="item-instruction fadeUp">
-                    <div class="instruction-box instruction-text">
-                        <p>Bland med vann</p>
-                    </div>
-                    <div class="instruction-box">
-                        <img class="image instruction" src="data/images/Instruction/Instruction_2.png" alt="Silomax IQ">
-                    </div>
-                </div>
-            
-                <div class="item-instruction fadeUp">
-                    <div class="instruction-box">
-                        <img class="image instruction" src="data/images/Instruction/Instruction_3.png" alt="Silomax IQ">
-                    </div>
-                    <div class="instruction-box instruction-text">
-                        <p>Rist i 30 sek</p>
-                    </div>
-                </div>
-            
-                <div class="item-instruction fadeUp">
-                    <div class="instruction-box instruction-text">
-                        <p>Tilsett i siloen</p>
-                    </div>
-                    <div class="instruction-box">
-                        <img class="image instruction" src="data/images/Instruction/Instruction_4.png" alt="Silomax IQ">
-                    </div>
+
+                <div class="instruction-timeline">
+                    <div class="timeline-line"></div>
+
+                    <article class="instruction-step fadeUp">
+                        <div class="step-marker">01</div>
+                        <div class="step-card">
+                            <div class="step-visual">
+                                <img class="image instruction" src="data/images/Instruction/Instruction_1.png" alt="Steg 1: Mål opp dose">
+                            </div>
+                            <div class="step-content">
+                                <span class="step-label" data-i18n="inst.s1.label">Steg 1</span>
+                                <h2 class="step-title" data-i18n="inst.s1.title">Mål opp dose</h2>
+                                <p class="step-desc" data-i18n="inst.s1.desc">Mål opp riktig mengde pulver etter antall tonn gras som skal ensileres.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="instruction-step fadeUp">
+                        <div class="step-marker">02</div>
+                        <div class="step-card">
+                            <div class="step-visual">
+                                <img class="image instruction" src="data/images/Instruction/Instruction_2.png" alt="Steg 2: Bland med vann">
+                            </div>
+                            <div class="step-content">
+                                <span class="step-label" data-i18n="inst.s2.label">Steg 2</span>
+                                <h2 class="step-title" data-i18n="inst.s2.title">Bland med vann</h2>
+                                <p class="step-desc" data-i18n="inst.s2.desc">Hell pulveret i rent, lunkent vann for å aktivere melkesyrebakteriene.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="instruction-step fadeUp">
+                        <div class="step-marker">03</div>
+                        <div class="step-card">
+                            <div class="step-visual">
+                                <img class="image instruction" src="data/images/Instruction/Instruction_3.png" alt="Steg 3: Rist i 30 sek">
+                            </div>
+                            <div class="step-content">
+                                <span class="step-label" data-i18n="inst.s3.label">Steg 3</span>
+                                <h2 class="step-title" data-i18n="inst.s3.title">Rist i 30 sek</h2>
+                                <p class="step-desc" data-i18n="inst.s3.desc">Rist beholderen godt i minst 30 sekunder til alt pulveret er helt oppløst.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="instruction-step fadeUp">
+                        <div class="step-marker">04</div>
+                        <div class="step-card">
+                            <div class="step-visual">
+                                <img class="image instruction" src="data/images/Instruction/Instruction_4.png" alt="Steg 4: Tilsett i siloen">
+                            </div>
+                            <div class="step-content">
+                                <span class="step-label" data-i18n="inst.s4.label">Steg 4</span>
+                                <h2 class="step-title" data-i18n="inst.s4.title">Tilsett i siloen</h2>
+                                <p class="step-desc" data-i18n="inst.s4.desc">Hell den ferdigblandede løsningen over i doseringsutstyret og start høstingen.</p>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
     <footer class="main-footer">
         <div class="container footer-container">
-            <p>&copy; 2004 - 2026 Silomax. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="footer-logo" href="/index.html">
+                        <span class="footer-logo-dot"></span>
+                        SILOMAX
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer.tagline">
+                        Kontrollert ensilering fra gras til verdi. Bevist pålitelig under reelle norske forhold i en årrekke.
+                    </p>
+                    <div class="footer-badges">
+                        <span class="footer-badge" data-i18n="footer.badge1">EFSA-godkjent</span>
+                        <span class="footer-badge" data-i18n="footer.badge2">Økologisk godkjent</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="footer.products">Produkter</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="/iq.html#oversikt">
+                                <span class="product-dot product-dot-iq"></span>
+                                Silomax IQ
+                                <span class="footer-meta" data-i18n="footer.iqMeta">20–35% TS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/stabil.html#oversikt">
+                                <span class="product-dot product-dot-stabil"></span>
+                                Silomax STABIL
+                                <span class="footer-meta" data-i18n="footer.stabilMeta">28–55% TS</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="footer.links">Snarveier</h3>
+                    <ul class="footer-links">
+                        <li><a href="/index.html#produkter" data-i18n="footer.linkProducts">Produkter</a></li>
+                        <li><a href="/index.html#tilbakemeldinger" data-i18n="footer.linkFeedback">Erfaringer</a></li>
+                        <li><a href="/faq.html" data-i18n="footer.linkFaq">Ofte stilte spørsmål (FAQ)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2004 – 2026 Silomax. All rights reserved.</p>
+                <p class="footer-bottom-note" data-i18n="footer.note">Utviklet for norske forhold</p>
+            </div>
         </div>
     </footer>
 </body>

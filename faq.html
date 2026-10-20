@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Silomax - Kontrollert ensilering fra gras til verdi.">
-    <title>Silomax</title>
+    <title>Silomax - FAQ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="header.js"></script>
@@ -17,12 +18,20 @@
                 <div class="bubble active"></div>
                 <div class="bubble hover"></div>
                 <nav class="nav">
-                    <a class="" href="/index.html">Home</a>
+                    <a class="" href="/index.html" data-i18n="nav.home">Home</a>
                     <a class="" href="/iq.html">IQ</a>
                     <a class="" href="/stabil.html">STABIL</a>
-                    <a class="" href="/faq.html">FAQ</a>
+                    <a class="" href="/faq.html" data-i18n="nav.faq">FAQ</a>
                 </nav>
             </div>
+        </div>
+        <div class="nav-wrap lang-wrap">
+            <div class="bubble lang-bubble active"></div>
+            <div class="bubble lang-bubble hover"></div>
+            <nav class="nav lang-nav" aria-label="Language selector">
+                <a href="?lang=no" data-lang="no" class="active">NO</a>
+                <a href="?lang=en" data-lang="en">EN</a>
+            </nav>
         </div>
     </header>
     <main class="container">
@@ -30,17 +39,17 @@
             <div class="faq-item">
                 <div class="faq-item-header">
                     <img class="faq-item-image" alt="faq-image" src="data/images/faq_images/faq_image_1.png">
-                    <p class="faq-item-question">Hva er SILOMAX?</p>
+                    <p class="faq-item-question" data-i18n="faq.q1">Hva er SILOMAX?</p>
                     <button class="btn faq-toggle" aria-expanded="false">+</button>
                 </div>
 
                 <div class="faq-item-text">
-                    <p>
+                    <p data-i18n="faq.a1.p1">
                         SILOMAX er naturlige melkesyrebakterier som er funnet i naturen. De er valgt ut blant flere tusen isolerte
                         bakteriestammer, basert på sine egenskaper.
                     </p>
-                    <p>
-                        Alle bakteriene i SILOMAX er unike og patenterte. Samtlige er godkjent av European Feed Safety Authority(EFSA) og EU til
+                    <p data-i18n="faq.a1.p2">
+                        Alle bakteriene i SILOMAX er unike og patenterte. Samtlige er godkjent av European Feed Safety Authority (EFSA) og EU til
                         ensilering av gress, basert på uavhengige tester, utført etter relevante europeiske testmetoder.
                     </p>
                 </div>
@@ -48,15 +57,15 @@
             <div class="faq-item">
                 <div class="faq-item-header">
                     <img class="faq-item-image" alt="faq-image" src="data/images/faq_images/faq_image_2.png">
-                    <p class="faq-item-question">Hvordan virker det?</p>
+                    <p class="faq-item-question" data-i18n="faq.q2">Hvordan virker det?</p>
                     <button class="btn faq-toggle" aria-expanded="false">+</button>
                 </div>
                 <div class="faq-item-text">
-                    <p>
+                    <p data-i18n="faq.a2.p1">
                         Hensikten med all ensilering er å bevare fôret ved gjæring. En god gjæring vil beholde mest mulig av næringsstoffene i
                         fôret fra høstetidspunktet. For å sikre at en god gjæring finner sted må et anaerobt miljø etableres raskest mulig.
                     </p>
-                    <p>
+                    <p data-i18n="faq.a2.p2">
                         Når oksygenet er fjernet, konverterer melkesyrebakterier plantesukker til mer melkesyre. Dette senker pHen og forhindrer
                         uønskede organismer i å bryte ned ensilasjen og redusere næringsinnholdet, samt gjør ensilasjen lagringsstabil.
                     </p>
@@ -65,16 +74,16 @@
             <div class="faq-item">
                 <div class="faq-item-header">
                     <img class="faq-item-image" alt="faq-image" src="data/images/faq_images/faq_image_3.png">
-                    <p class="faq-item-question">Er det viktig å ha flest mulig bakterier i ensileringsmiddelet?</p>
+                    <p class="faq-item-question" data-i18n="faq.q3">Er det viktig å ha flest mulig bakterier i ensileringsmiddelet?</p>
                     <button class="btn faq-toggle" aria-expanded="false">+</button>
                 </div>
                 <div class="faq-item-text">
-                    <p>
+                    <p data-i18n="faq.a3.p1">
                         Kvaliteten på et ensileringsmiddel bestemmes ikke bare av dets totale antall bakterier. Fremfor
                         alt er reproduksjonshastigheten til bakteriestammene den inneholder, samt typen plantesukker de kan omdanne til
                         melkesyre avgjørende.
                     </p>
-                    <p>
+                    <p data-i18n="faq.a3.p2">
                         En velbalansert sammensetning av bakteriestammer dominerer hele ensileringsprosessen.
                     </p>
                 </div>
@@ -82,11 +91,11 @@
             <div class="faq-item">
                 <div class="faq-item-header">
                     <img class="faq-item-image" alt="faq-image" src="data/images/faq_images/faq_image_4.png">
-                    <p class="faq-item-question">Finnes det et universalprodukt?</p>
+                    <p class="faq-item-question" data-i18n="faq.q4">Finnes det et universalprodukt?</p>
                     <button class="btn faq-toggle" aria-expanded="false">+</button>
                 </div>
                 <div class="faq-item-text">
-                    <p>
+                    <p data-i18n="faq.a4.p1">
                         Siden grunnlagene er så forskjellige, er det ikke mulig å utvikle et allsidig produkt. Fremfor alt spiller
                         tørrstoffinnholdet i materialet som skal ensileres, en avgjørende rolle i valg av riktig kombinasjon av bakteriestammer.
                     </p>
@@ -95,35 +104,34 @@
             <div class="faq-item">
                 <div class="faq-item-header">
                     <img class="faq-item-image" alt="faq-image" src="data/images/faq_images/faq_image_5.png">
-                    <p class="faq-item-question">Hvordan virker det?</p>
+                    <p class="faq-item-question" data-i18n="faq.q5">Hvor utbredt er SILOMAX?</p>
                     <button class="btn faq-toggle" aria-expanded="false">+</button>
                 </div>
                 <div class="faq-item-text">
-                    <p>
+                    <p data-i18n="faq.a5.p1">
                         Sammensetningen av bakterier er unik, og designet for Norge, og selges kun her. Alle bakteriene blir også brukt i andre
                         ensileringsmidler i andre sammensetninger for andre markeder, og er samlet Europas mest brukte ensileringsmidler.
                     </p>
-                    <p>
-                        Totalt
-                        behandlet de ca. 48 millioner tonn i 2020. I Norge behandlet vi ca 420.000 tonn i 2020.
+                    <p data-i18n="faq.a5.p2">
+                        Totalt behandlet de ca. 48 millioner tonn i 2020. I Norge behandlet vi ca. 420 000 tonn i 2020.
                     </p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-item-header">
                     <img class="faq-item-image" alt="faq-image" src="data/images/faq_images/faq_image_6.png">
-                    <p class="faq-item-question">Kan melkesyrebakterier kombineres med enzymer?</p>
+                    <p class="faq-item-question" data-i18n="faq.q6">Kan melkesyrebakterier kombineres med enzymer?</p>
                     <button class="btn faq-toggle" aria-expanded="false">+</button>
                 </div>
                 <div class="faq-item-text">
-                    <p>
+                    <p data-i18n="faq.a6.p1">
                         Nei.
                     </p>
-                    <p>
+                    <p data-i18n="faq.a6.p2">
                         Mengden enzymer som kreves for å oppnå en beviselig effekt, vil være for høy. Denne tilnærmingen ville ikke være
                         økonomisk.
                     </p>
-                    <p>
+                    <p data-i18n="faq.a6.p3">
                         Hittil har ingen enzym blitt godkjent av EU som ensileringstilsetning, i doser som gjenspeiler faktisk praksis.
                     </p>
                 </div>
@@ -132,7 +140,55 @@
     </main>
     <footer class="main-footer">
         <div class="container footer-container">
-            <p>&copy; 2004 - 2026 Silomax. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="footer-logo" href="/index.html">
+                        <span class="footer-logo-dot"></span>
+                        SILOMAX
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer.tagline">
+                        Kontrollert ensilering fra gras til verdi. Bevist pålitelig under reelle norske forhold i en årrekke.
+                    </p>
+                    <div class="footer-badges">
+                        <span class="footer-badge" data-i18n="footer.badge1">EFSA-godkjent</span>
+                        <span class="footer-badge" data-i18n="footer.badge2">Økologisk godkjent</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="footer.products">Produkter</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="/iq.html#oversikt">
+                                <span class="product-dot product-dot-iq"></span>
+                                Silomax IQ
+                                <span class="footer-meta" data-i18n="footer.iqMeta">20–35% TS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/stabil.html#oversikt">
+                                <span class="product-dot product-dot-stabil"></span>
+                                Silomax STABIL
+                                <span class="footer-meta" data-i18n="footer.stabilMeta">28–55% TS</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="footer.links">Snarveier</h3>
+                    <ul class="footer-links">
+                        <li><a href="/index.html#produkter" data-i18n="footer.linkProducts">Produkter</a></li>
+                        <li><a href="/index.html#tilbakemeldinger" data-i18n="footer.linkFeedback">Erfaringer</a></li>
+                        <li><a href="/faq.html" data-i18n="footer.linkFaq">Ofte stilte spørsmål (FAQ)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2004 – 2026 Silomax. All rights reserved.</p>
+                <p class="footer-bottom-note" data-i18n="footer.note">Utviklet for norske forhold</p>
+            </div>
         </div>
     </footer>
 </body>

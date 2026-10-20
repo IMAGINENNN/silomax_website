@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // клик по кнопке
         btn.addEventListener('click', (e) => {
-            e.stopPropagation(); // ❗ важно
+            e.stopPropagation();
             toggle();
         });
 

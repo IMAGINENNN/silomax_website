@@ -1,9 +1,15 @@
-@media (max-width: 1480px) {
+@media (max-width: 1920px) {
+    
+}
+
+@media (max-width: 1024px) {
 
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 768px) {
 
-@media (max-width: 910px) {}
+}
 
-@media (max-width: 798px) {}
+@media (max-width: 375px) {
+
+}
