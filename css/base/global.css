@@ -34,3 +34,9 @@ main {
 .btn:hover {
     cursor: pointer;
 }
+
+.container {
+    max-width: 1024px;
+
+    margin-inline: auto;
+}

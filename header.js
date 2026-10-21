@@ -85,7 +85,11 @@ const SILOMAX_I18N = {
         "footer.badge2": "Økologisk godkjent",
         "footer.products": "Produkter",
         "footer.iqMeta": "20–35% TS",
+        "footer.iqResults": "IQ Forsøksresultater",
+        "footer.iqInstructions": "IQ Bruksanvisning",
         "footer.stabilMeta": "28–55% TS",
+        "footer.stabilResults": "STABIL Forsøksresultater",
+        "footer.stabilInstructions": "STABIL Bruksanvisning",
         "footer.links": "Snarveier",
         "footer.linkProducts": "Produkter",
         "footer.linkFeedback": "Erfaringer",
@@ -178,7 +182,11 @@ const SILOMAX_I18N = {
         "footer.badge2": "Organic Approved",
         "footer.products": "Products",
         "footer.iqMeta": "20–35% DM",
+        "footer.iqResults": "IQ Trial Results",
+        "footer.iqInstructions": "IQ Instructions",
         "footer.stabilMeta": "28–55% DM",
+        "footer.stabilResults": "STABIL Trial Results",
+        "footer.stabilInstructions": "STABIL Instructions",
         "footer.links": "Quick Links",
         "footer.linkProducts": "Products",
         "footer.linkFeedback": "Testimonials",
@@ -193,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname;
 
     mainNavLinks.forEach(link => {
-        const linkPath = new URL(link.href, window.location.origin).pathname;
+        const linkPath = new URL(link.getAttribute("href"), window.location.href).pathname;
         const isHome =
             (currentPath === "/" || currentPath.endsWith("/index.html")) &&
             linkPath.endsWith("/index.html");
@@ -275,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. Smooth scroll for same-page anchor links
     document.querySelectorAll('a[href*="#"]').forEach(anchor => {
         anchor.addEventListener("click", event => {
-            const url = new URL(anchor.href, window.location.origin);
+            const url = new URL(anchor.getAttribute("href"), window.location.href);
             const samePage =
                 url.pathname === window.location.pathname ||
                 ((window.location.pathname === "/" || window.location.pathname.endsWith("/index.html")) &&

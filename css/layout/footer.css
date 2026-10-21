@@ -149,6 +149,25 @@
     transform: translateX(4px);
 }
 
+.footer-sublink {
+    padding-left: 1.15rem;
+}
+
+.footer-sublink a {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.footer-sublink-iq,
+.footer-sublink-stabil {
+    display: none;
+}
+
+.theme-iq .footer-sublink-iq,
+.theme-stabil .footer-sublink-stabil {
+    display: block;
+}
+
 .product-dot {
     width: 8px;
     height: 8px;
