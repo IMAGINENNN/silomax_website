@@ -317,6 +317,36 @@ section[id] {
     transform: translateY(-50%) scale(1.08);
 }
 
+.carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background: rgba(17, 22, 37, 0.22);
+    cursor: pointer;
+    transition: transform 250ms ease, background-color 250ms ease, box-shadow 250ms ease;
+}
+
+.carousel-dot:hover {
+    background: rgba(17, 22, 37, 0.45);
+    transform: scale(1.15);
+}
+
+.carousel-dot.active {
+    background: hsl(220, 20%, 24%);
+    transform: scale(1.25);
+    box-shadow: 0 0 0 3px rgba(17, 22, 37, 0.12);
+}
+
 @media (max-width: 768px) {
     .container-products {
         flex-direction: column;

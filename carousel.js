@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".carousel-item");
+    const dots = document.querySelectorAll(".carousel-dot");
     let currentIndex = 1;
 
     function getOffset(cardIndex, currentIndex, total) {
@@ -24,7 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
             card.classList.remove("main-item", "side-item", "left-item", "right-item", "hidden-item");
             card.classList.add(...classForOffset(offset).split(" "));
         });
+
+        dots.forEach(dot => {
+            const dotIndex = parseInt(dot.dataset.index, 10);
+            const isActive = dotIndex === currentIndex;
+            dot.classList.toggle("active", isActive);
+            dot.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
     }
+
+    dots.forEach(dot => {
+        dot.addEventListener("click", () => {
+            currentIndex = parseInt(dot.dataset.index, 10);
+            updateCarousel();
+        });
+    });
 
     document.querySelector(".carousel-btn-right").addEventListener("click", () => {
         currentIndex = (currentIndex + 1) % cards.length;
@@ -35,4 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
         currentIndex = (currentIndex - 1 + cards.length) % cards.length;
         updateCarousel();
     });
+
+    updateCarousel();
 });
