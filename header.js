@@ -82,7 +82,7 @@ const SILOMAX_I18N = {
         // Footer
         "footer.tagline": "Kontrollert ensilering fra gras til verdi. Bevist pålitelig under reelle norske forhold i en årrekke.",
         "footer.badge1": "EFSA-godkjent",
-        "footer.badge2": "Økologisk godkjent",
+        "footer.badge2": "Øko dritsmiddel",
         "footer.products": "Produkter",
         "footer.iqMeta": "20–35% TS",
         "footer.iqResults": "IQ Forsøksresultater",
@@ -224,6 +224,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 2. Language Switcher (NO / EN) Logic
+    // Capture the live HTML/text directly from the DOM as the source of truth for "no"
+    // so editing the HTML files shows up immediately in preview without being overwritten.
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        SILOMAX_I18N.no[key] = el.textContent;
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach(el => {
+        const key = el.getAttribute("data-i18n-html");
+        SILOMAX_I18N.no[key] = el.innerHTML;
+    });
+
     const langLinks = document.querySelectorAll(".lang-nav a[data-lang]");
     const urlParams = new URLSearchParams(window.location.search);
     const paramLang = urlParams.get("lang");
