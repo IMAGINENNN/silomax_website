@@ -82,7 +82,7 @@ const SILOMAX_I18N = {
         // Footer
         "footer.tagline": "Kontrollert ensilering fra gras til verdi. Bevist pålitelig under reelle norske forhold i en årrekke.",
         "footer.badge1": "EFSA-godkjent",
-        "footer.badge2": "Øko dritsmiddel",
+        "footer.badge2": "Øko driftsmiddel",
         "footer.products": "Produkter",
         "footer.iqMeta": "20–35% TS",
         "footer.iqResults": "IQ Forsøksresultater",
