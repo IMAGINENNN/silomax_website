@@ -108,12 +108,17 @@
 
 .faq-item-text {
     margin: 0;
-    padding: 0;
+    padding: 0 2.5rem 0 116px;
 
-    color: var(--text-muted);
-    font-size: 1.5rem;
+    color: hsl(220, 10%, 36%);
+    font-size: clamp(1.04rem, 1.25vw, 1.15rem);
+    font-weight: 450;
+    line-height: 1.7;
+    letter-spacing: -0.008em;
 
-    text-align: justify;
+    text-align: left;
+    text-wrap: pretty;
+    max-width: 76ch;
 
     max-height: 0;
 
@@ -125,7 +130,21 @@
 }
 
 .faq-item-text p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
+}
+
+.faq-item-text p:last-child {
+    margin-bottom: 0.5rem;
+}
+
+.faq-item-text strong {
+    color: hsl(220, 20%, 14%);
+    font-weight: 650;
+}
+
+.faq-item-text .purple {
+    color: hsl(294, 58%, 38%);
+    font-weight: 700;
 }
 
 .faq-item.active .faq-item-text {
