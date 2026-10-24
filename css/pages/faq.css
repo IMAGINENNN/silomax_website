@@ -1,3 +1,7 @@
+main.container {
+    width: 100%;
+}
+
 .faq-container {
     display: grid;
 
@@ -20,6 +24,7 @@
     padding: 12px 0;
 
     border-bottom: 1px solid black;
+    transition: padding-inline 400ms ease, border-bottom-color 400ms ease;
 }
 
 .faq-item:last-child {
@@ -91,7 +96,9 @@
     font-size: 1.5rem;
     letter-spacing: 1px;
 
-    margin-right: 10rem
+    flex: 1 1 0%;
+    min-width: 0;
+    margin-right: 10px;
 }
 
 .faq-toggle {
