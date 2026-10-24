@@ -66,7 +66,6 @@
     opacity: 0.65;
     pointer-events: none;
 }
-
 .item-image-product {
     position: relative;
     z-index: 1;
@@ -191,48 +190,6 @@
 
 .jump-pill-primary:hover {
     filter: brightness(1.08);
-}
-
-.container-item-text::after,
-.container-item-text::before {
-    content: '';
-    position: absolute;
-    box-sizing: content-box;
-    height: 100%;
-    width: 100%;
-    padding: 3px;
-    border-radius: 2rem;
-    background-image: conic-gradient(from var(--angle), transparent 10%, hsl(294, 45%, 35%));
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    animation: 3s spin linear infinite;
-}
-
-.container-item-text::before {
-    filter: blur(1rem);
-    opacity: 0.5;
-}
-
-.stabil::after,
-.stabil::before {
-    background-image: conic-gradient(from var(--angle), transparent 10%, hsl(221, 80%, 61%));
-}
-
-@property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-@keyframes spin {
-    from {
-        --angle: 0deg;
-    }
-    to {
-        --angle: 360deg;
-    }
 }
 
 /* =========================================

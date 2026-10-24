@@ -58,18 +58,6 @@ section[id] {
     gap: 1.5rem;
 }
 
-.container-products:has(.item-home-iq:hover) .animation-line {
-    box-shadow:
-        -10px 0 26px 7px hsl(294, 45%, 35%),
-        4px 0 15px 3px hsl(221, 80%, 61%);
-}
-
-.container-products:has(.item-home-stabil:hover) .animation-line {
-    box-shadow:
-        -4px 0 15px 3px hsl(294, 45%, 35%),
-        10px 0 26px 7px hsl(221, 80%, 61%);
-}
-
 .animation-line {
     position: absolute;
     bottom: 0;
@@ -78,11 +66,7 @@ section[id] {
     border-radius: 3em;
     height: 100%;
     width: 3px;
-    background: linear-gradient(to right, hsl(294, 45%, 35%) 50%, hsl(221, 80%, 61%) 50%);
-    box-shadow:
-        -4px 0 15px 3px hsl(294, 45%, 35%),
-        4px 0 15px 3px hsl(221, 80%, 61%);
-    transition: rotate 0.25s ease-in-out, box-shadow 0.45s ease-in-out;
+    background-color: hsl(0, 0%, 75%);
     pointer-events: none;
 }
 

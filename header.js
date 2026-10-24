@@ -1,6 +1,6 @@
 const SILOMAX_I18N = {
     no: {
-        "nav.home": "Home",
+        "nav.home": "HOME",
         "nav.faq": "FAQ",
 
         // Home page
@@ -97,7 +97,7 @@ const SILOMAX_I18N = {
         "footer.note": "Utviklet for norske forhold"
     },
     en: {
-        "nav.home": "Home",
+        "nav.home": "HOME",
         "nav.faq": "FAQ",
 
         // Home page
