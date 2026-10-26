@@ -12,8 +12,8 @@ const SILOMAX_I18N = {
         "home.readMore": "Les mer \u2192",
         "home.instructions": "Bruksanvisning",
         "home.feedback.badge": "Resultater i praksis",
-        "home.feedback.title": "Erfaringer fra norske gårdbrukere",
-        "home.feedback.subtitle": "Se hva bønder over hele landet opplever med Silomax IQ og STABIL",
+        "home.feedback.title": "<span class=\"hero-accent\">Erfaringer</span> fra norske gårdbrukere",
+        "home.feedback.subtitle": "Se hva bønder over hele landet opplever med <strong>Silomax IQ og STABIL</strong>",
 
         // IQ page
         "iq.dm": "Tørrstoffprosent: 20 - 35%",
@@ -110,8 +110,8 @@ const SILOMAX_I18N = {
         "home.readMore": "Read more \u2192",
         "home.instructions": "Instructions",
         "home.feedback.badge": "Results in Practice",
-        "home.feedback.title": "Experiences from Norwegian Farmers",
-        "home.feedback.subtitle": "See what farmers across the country experience with Silomax IQ and STABIL",
+        "home.feedback.title": "<span class=\"hero-accent\">Experiences</span> from Norwegian Farmers",
+        "home.feedback.subtitle": "See what farmers across the country experience with <strong>Silomax IQ and STABIL</strong>",
 
         // IQ page
         "iq.dm": "Dry matter: 20 - 35%",
