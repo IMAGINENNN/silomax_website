@@ -80,7 +80,7 @@ const SILOMAX_I18N = {
         "faq.a6.p3": "Hittil har ingen enzym blitt godkjent av EU som ensileringstilsetning, i doser som gjenspeiler faktisk praksis.",
 
         // Footer
-        "footer.tagline": "Kontrollert ensilering fra gras til verdi. Bevist pålitelig under reelle norske forhold i en årrekke.",
+        "footer.tagline": "<strong>Kontrollert ensilering – fra gras til verdi.</strong> Bevist pålitelig under norske forhold i tiår.",
         "footer.badge1": "EFSA-godkjent",
         "footer.badge2": "Øko driftsmiddel",
         "footer.products": "Produkter",
@@ -94,6 +94,7 @@ const SILOMAX_I18N = {
         "footer.linkProducts": "Produkter",
         "footer.linkFeedback": "Erfaringer",
         "footer.linkFaq": "Ofte stilte spørsmål (FAQ)",
+        "footer.rights": "Alle rettigheter forbeholdt.",
         "footer.note": "Utviklet for norske forhold"
     },
     en: {
@@ -177,7 +178,7 @@ const SILOMAX_I18N = {
         "faq.a6.p3": "To date, no enzyme has been approved by the EU as a silage additive at dosages that reflect actual farm practice.",
 
         // Footer
-        "footer.tagline": "Controlled ensiling from grass to value. Proven reliable under real Norwegian conditions for years.",
+        "footer.tagline": "<strong>Controlled ensiling – from grass to value.</strong> Proven reliable under Norwegian conditions for decades.",
         "footer.badge1": "EFSA Approved",
         "footer.badge2": "Organic Approved",
         "footer.products": "Products",
@@ -191,6 +192,7 @@ const SILOMAX_I18N = {
         "footer.linkProducts": "Products",
         "footer.linkFeedback": "Testimonials",
         "footer.linkFaq": "Frequently Asked Questions (FAQ)",
+        "footer.rights": "All rights reserved.",
         "footer.note": "Developed for Norwegian conditions"
     }
 };

@@ -67,21 +67,25 @@
 .footer-logo {
     display: inline-flex;
     align-items: center;
-    gap: 0.55rem;
-    font-size: 1.45rem;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    color: #ffffff;
     text-decoration: none;
     width: fit-content;
+    padding: 0.45rem 0.85rem;
+    border-radius: 0.85rem;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.25);
+    transition: transform 200ms ease, background-color 200ms ease;
 }
 
-.footer-logo-dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, hsl(294, 65%, 52%), hsl(221, 80%, 61%));
-    box-shadow: 0 0 12px hsla(294, 65%, 52%, 0.7);
+.footer-logo:hover {
+    transform: translateY(-2px);
+    background: #ffffff;
+}
+
+.footer-logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .footer-tagline {
