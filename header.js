@@ -94,7 +94,7 @@ const SILOMAX_I18N = {
         "footer.linkProducts": "Produkter",
         "footer.linkFeedback": "Erfaringer",
         "footer.linkFaq": "Ofte stilte spørsmål (FAQ)",
-        "footer.rights": "Alle rettigheter forbeholdt.",
+        "footer.rights": "Alle rettigheter forbeholdt",
         "footer.note": "Utviklet for norske forhold"
     },
     en: {
@@ -192,7 +192,7 @@ const SILOMAX_I18N = {
         "footer.linkProducts": "Products",
         "footer.linkFeedback": "Testimonials",
         "footer.linkFaq": "Frequently Asked Questions (FAQ)",
-        "footer.rights": "All rights reserved.",
+        "footer.rights": "All rights reserved",
         "footer.note": "Developed for Norwegian conditions"
     }
 };
