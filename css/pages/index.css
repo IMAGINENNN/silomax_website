@@ -12,9 +12,9 @@ section[id] {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.75rem;
-    margin-top: 6.5rem;
-    margin-bottom: 3rem;
+    gap: 0.95rem;
+    margin-top: 6.75rem;
+    margin-bottom: 2.75rem;
     padding: 1rem;
     color: var(--text);
 }
@@ -25,12 +25,12 @@ section[id] {
 
 .hero-badge {
     display: inline-block;
-    padding: 0.35rem 1rem;
+    padding: 0.38rem 1.05rem;
     border-radius: 999px;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     background: linear-gradient(90deg, hsla(294, 45%, 35%, 0.1), hsla(221, 80%, 61%, 0.12));
     border: 1px solid hsla(260, 50%, 50%, 0.22);
     color: hsl(275, 45%, 35%);
@@ -39,17 +39,40 @@ section[id] {
 .product-header-main {
     margin: 0;
     font-weight: 800;
-    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    max-width: 720px;
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    letter-spacing: -0.03em;
+    line-height: 1.14;
+    max-width: 18ch;
+    color: hsl(220, 20%, 14%);
+    text-wrap: balance;
+}
+
+.hero-accent {
+    background: linear-gradient(
+        105deg,
+        hsl(294, 58%, 36%) 0%,
+        hsl(262, 65%, 44%) 50%,
+        hsl(221, 80%, 52%) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .product-header-second {
     margin: 0;
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 580px;
+    font-size: clamp(1.06rem, 1.45vw, 1.22rem);
+    font-weight: 450;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    color: hsl(220, 10%, 40%);
+    max-width: 52ch;
+    text-wrap: pretty;
+}
+
+.product-header-second strong {
+    color: hsl(220, 20%, 16%);
+    font-weight: 650;
 }
 
 .container-products {

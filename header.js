@@ -5,8 +5,8 @@ const SILOMAX_I18N = {
 
         // Home page
         "home.badge": "Kontrollert ensilering",
-        "home.title": "Mer melk og kjøtt fra gårdens egne ressurser",
-        "home.subtitle": "Bevist pålitelig under reelle norske forhold i en årrekke. Støttet av vitenskap.",
+        "home.title": "<span class=\"hero-accent\">Mer melk og kjøtt</span> fra gårdens egne ressurser",
+        "home.subtitle": "Bevist pålitelig under reelle norske forhold i en årrekke – <strong>støttet av vitenskap</strong>.",
         "home.iq.dm": "Tørrstoffprosent: 20 - 35%",
         "home.stabil.dm": "Tørrstoffprosent: 28 - 55%",
         "home.readMore": "Les mer \u2192",
@@ -103,8 +103,8 @@ const SILOMAX_I18N = {
 
         // Home page
         "home.badge": "Controlled Ensiling",
-        "home.title": "More milk and meat from your farm's own resources",
-        "home.subtitle": "Proven reliable under real Norwegian conditions for years. Backed by science.",
+        "home.title": "<span class=\"hero-accent\">More milk and meat</span> from your farm's own resources",
+        "home.subtitle": "Proven reliable under real Norwegian conditions for years – <strong>backed by science</strong>.",
         "home.iq.dm": "Dry matter: 20 - 35%",
         "home.stabil.dm": "Dry matter: 28 - 55%",
         "home.readMore": "Read more \u2192",
