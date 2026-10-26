@@ -19,9 +19,9 @@ main.container {
     position: relative;
 
     height: auto;
-    gap: 0.75rem;
+    gap: 1.75rem;
 
-    padding: 12px 0;
+    padding: 1rem 0;
 
     border-bottom: 1px solid black;
     transition: padding-inline 400ms ease, border-bottom-color 400ms ease;
