@@ -94,8 +94,24 @@ const SILOMAX_I18N = {
         "footer.linkProducts": "Produkter",
         "footer.linkFeedback": "Erfaringer",
         "footer.linkFaq": "Ofte stilte spørsmål (FAQ)",
+        "footer.linkPrivacy": "Personvern",
         "footer.rights": "Alle rettigheter forbeholdt",
-        "footer.note": "Utviklet for norske forhold"
+        "footer.note": "Utviklet for norske forhold",
+
+        // Cookie Banner & Privacy Page
+        "cookie.text": "Vi bruker informasjonskapsler (Google Analytics) for å analysere trafikk og forbedre nettsiden. Skriptene kjøres kun dersom du samtykker. <a href=\"personvern.html\">Les mer om personvern</a>.",
+        "cookie.accept": "Godta",
+        "cookie.decline": "Avslå",
+        "privacy.badge": "Personvern & Cookies",
+        "privacy.title": "Personvernerklæring",
+        "privacy.lead": "Denne siden forklarer hvordan Silomax (Forbruksvarer AS) bruker informasjonskapsler (cookies) og Google Analytics på nettsiden vår.",
+        "privacy.h1": "Bruk av Google Analytics",
+        "privacy.p1": "Vi bruker Google Analytics for å forstå hvordan besøkende bruker nettsiden vår. Verktøyet samler inn anonymisert statistikk, som hvilke sider som besøkes, hvor lenge besøket varer, og hvilken type enhet som benyttes. Denne informasjonen hjelper oss med å forbedre innholdet og brukeropplevelsen.",
+        "privacy.h2": "Samtykke og blokkering av skript",
+        "privacy.p2": "Google Analytics er fullstendig blokkert frem til du aktivt gir ditt samtykke i cookie-banneret. Dersom du velger «Avslå», lastes ingen Google Analytics-skript inn, og ingen sporingskapsler lagres i nettleseren din.",
+        "privacy.h3": "Administrer ditt samtykke",
+        "privacy.p3": "Du kan når som helst endre eller trekke tilbake samtykket ditt ved å klikke på knappen nedenfor, eller ved å slette informasjonskapsler og nettsteddata i nettleseren din.",
+        "privacy.resetBtn": "Endre cookie-innstillinger"
     },
     en: {
         "nav.home": "HOME",
@@ -192,10 +208,75 @@ const SILOMAX_I18N = {
         "footer.linkProducts": "Products",
         "footer.linkFeedback": "Testimonials",
         "footer.linkFaq": "Frequently Asked Questions (FAQ)",
+        "footer.linkPrivacy": "Privacy",
         "footer.rights": "All rights reserved",
-        "footer.note": "Developed for Norwegian conditions"
+        "footer.note": "Developed for Norwegian conditions",
+
+        // Cookie Banner & Privacy Page
+        "cookie.text": "We use cookies (Google Analytics) to analyze traffic and improve our website. Scripts are blocked until you give your consent. <a href=\"personvern.html\">Read our privacy policy</a>.",
+        "cookie.accept": "Accept",
+        "cookie.decline": "Decline",
+        "privacy.badge": "Privacy & Cookies",
+        "privacy.title": "Privacy Policy",
+        "privacy.lead": "This page explains how Silomax (Forbruksvarer AS) uses cookies and Google Analytics on our website.",
+        "privacy.h1": "Use of Google Analytics",
+        "privacy.p1": "We use Google Analytics to understand how visitors interact with our website. The tool collects anonymized statistics such as pages visited, session duration, and device type. This information helps us improve our content and user experience.",
+        "privacy.h2": "Consent and Script Blocking",
+        "privacy.p2": "Google Analytics is completely blocked until you actively give your consent in the cookie banner. If you choose 'Decline', no Google Analytics scripts are loaded and no tracking cookies are stored in your browser.",
+        "privacy.h3": "Manage Your Consent",
+        "privacy.p3": "You can change or withdraw your consent at any time by clicking the button below, or by clearing cookies and site data in your browser.",
+        "privacy.resetBtn": "Change cookie settings"
     }
 };
+
+// Set your Google Analytics Measurement ID here when ready (e.g. "G-XXXXXXXXXX").
+// Scripts remain completely blocked until the user clicks "Accept" in the cookie banner.
+const SILOMAX_GA_ID = "";
+const COOKIE_CONSENT_KEY = "silomax_cookie_consent";
+
+function enableGoogleAnalytics() {
+    if (window.__silomaxGaLoaded) return;
+    window.__silomaxGaLoaded = true;
+
+    // 1. Activate any blocked <script type="text/plain" data-cookie-consent="analytics"> tags
+    document.querySelectorAll('script[type="text/plain"][data-cookie-consent="analytics"]').forEach(blockedScript => {
+        const activeScript = document.createElement("script");
+        Array.from(blockedScript.attributes).forEach(attr => {
+            if (attr.name !== "type" && attr.name !== "data-cookie-consent" && attr.name !== "data-src") {
+                activeScript.setAttribute(attr.name, attr.value);
+            }
+        });
+        const dataSrc = blockedScript.getAttribute("data-src");
+        if (dataSrc) {
+            activeScript.src = dataSrc;
+        } else {
+            activeScript.textContent = blockedScript.textContent;
+        }
+        blockedScript.parentNode.replaceChild(activeScript, blockedScript);
+    });
+
+    // 2. If SILOMAX_GA_ID is configured, dynamically load gtag.js
+    if (SILOMAX_GA_ID && /^G-[A-Z0-9]+$/i.test(SILOMAX_GA_ID)) {
+        window["ga-disable-" + SILOMAX_GA_ID] = false;
+        const gtagScript = document.createElement("script");
+        gtagScript.async = true;
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(SILOMAX_GA_ID);
+        document.head.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+            window.dataLayer.push(arguments);
+        };
+        window.gtag("js", new Date());
+        window.gtag("config", SILOMAX_GA_ID, { anonymize_ip: true });
+    }
+}
+
+function disableGoogleAnalytics() {
+    if (SILOMAX_GA_ID) {
+        window["ga-disable-" + SILOMAX_GA_ID] = true;
+    }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Main Navigation Active & Hover Droplet Logic
@@ -237,6 +318,55 @@ document.addEventListener("DOMContentLoaded", () => {
         const key = el.getAttribute("data-i18n-html");
         SILOMAX_I18N.no[key] = el.innerHTML;
     });
+
+    // Inject Cookie Consent Banner (so applyLanguage translates it as well)
+    const cookieBanner = document.createElement("aside");
+    cookieBanner.className = "cookie-banner";
+    cookieBanner.setAttribute("role", "dialog");
+    cookieBanner.setAttribute("aria-live", "polite");
+    cookieBanner.setAttribute("aria-label", "Cookie consent");
+    cookieBanner.innerHTML = `
+        <div class="cookie-banner-content">
+            <p class="cookie-banner-text" data-i18n-html="cookie.text">${SILOMAX_I18N.no["cookie.text"]}</p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="cookie-btn cookie-btn-decline" data-i18n="cookie.decline">${SILOMAX_I18N.no["cookie.decline"]}</button>
+                <button type="button" class="cookie-btn cookie-btn-accept" data-i18n="cookie.accept">${SILOMAX_I18N.no["cookie.accept"]}</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(cookieBanner);
+
+    const savedConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
+    if (savedConsent === "accepted") {
+        enableGoogleAnalytics();
+    } else if (savedConsent === "declined") {
+        disableGoogleAnalytics();
+    } else {
+        requestAnimationFrame(() => {
+            cookieBanner.classList.add("is-visible");
+        });
+    }
+
+    cookieBanner.querySelector(".cookie-btn-accept").addEventListener("click", () => {
+        localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
+        cookieBanner.classList.remove("is-visible");
+        enableGoogleAnalytics();
+    });
+
+    cookieBanner.querySelector(".cookie-btn-decline").addEventListener("click", () => {
+        localStorage.setItem(COOKIE_CONSENT_KEY, "declined");
+        cookieBanner.classList.remove("is-visible");
+        disableGoogleAnalytics();
+    });
+
+    const resetConsentBtn = document.getElementById("reset-cookie-consent");
+    if (resetConsentBtn) {
+        resetConsentBtn.addEventListener("click", () => {
+            localStorage.removeItem(COOKIE_CONSENT_KEY);
+            disableGoogleAnalytics();
+            cookieBanner.classList.add("is-visible");
+        });
+    }
 
     const langLinks = document.querySelectorAll(".lang-nav a[data-lang]");
     const urlParams = new URLSearchParams(window.location.search);

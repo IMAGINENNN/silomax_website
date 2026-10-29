@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Silomax - Personvernerklæring og bruk av informasjonskapsler (Google Analytics).">
+    <title>Silomax - Personvern</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="header.js"></script>
+</head>
+
+<body>
+    <header class="masthead">
+        <a class="header-logo" href="index.html" aria-label="Silomax">
+            <img class="header-logo-img" src="data/images/logos/silomax_logo_ensilering.png" alt="Silomax Ensilering">
+        </a>
+        <div class="container nav-container">
+            <div class="nav-wrap">
+                <div class="bubble active"></div>
+                <div class="bubble hover"></div>
+                <nav class="nav">
+                    <a class="" href="index.html" data-i18n="nav.home">HOME</a>
+                    <a class="" href="iq.html">IQ</a>
+                    <a class="" href="stabil.html">STABIL</a>
+                    <a class="" href="faq.html" data-i18n="nav.faq">FAQ</a>
+                </nav>
+            </div>
+        </div>
+        <div class="nav-wrap lang-wrap">
+            <div class="bubble lang-bubble active"></div>
+            <div class="bubble lang-bubble hover"></div>
+            <nav class="nav lang-nav" aria-label="Language selector">
+                <a href="?lang=no" data-lang="no" class="active">NO</a>
+                <a href="?lang=en" data-lang="en">EN</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="privacy-section">
+            <div class="privacy-card">
+                <span class="hero-badge" data-i18n="privacy.badge">Personvern &amp; Cookies</span>
+                <h1 class="privacy-title" data-i18n="privacy.title">Personvernerklæring</h1>
+                <p class="privacy-lead" data-i18n="privacy.lead">
+                    Denne siden forklarer hvordan Silomax (Forbruksvarer AS) bruker informasjonskapsler (cookies) og Google Analytics på nettsiden vår.
+                </p>
+
+                <div class="privacy-block">
+                    <h2 data-i18n="privacy.h1">Bruk av Google Analytics</h2>
+                    <p data-i18n="privacy.p1">
+                        Vi bruker Google Analytics for å forstå hvordan besøkende bruker nettsiden vår. Verktøyet samler inn anonymisert statistikk, som hvilke sider som besøkes, hvor lenge besøket varer, og hvilken type enhet som benyttes. Denne informasjonen hjelper oss med å forbedre innholdet og brukeropplevelsen.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 data-i18n="privacy.h2">Samtykke og blokkering av skript</h2>
+                    <p data-i18n="privacy.p2">
+                        Google Analytics er fullstendig blokkert frem til du aktivt gir ditt samtykke i cookie-banneret. Dersom du velger «Avslå», lastes ingen Google Analytics-skript inn, og ingen sporingskapsler lagres i nettleseren din.
+                    </p>
+                </div>
+
+                <div class="privacy-block">
+                    <h2 data-i18n="privacy.h3">Administrer ditt samtykke</h2>
+                    <p data-i18n="privacy.p3">
+                        Du kan når som helst endre eller trekke tilbake samtykket ditt ved å klikke på knappen nedenfor, eller ved å slette informasjonskapsler og nettsteddata i nettleseren din.
+                    </p>
+                    <button type="button" class="privacy-reset-btn" id="reset-cookie-consent" data-i18n="privacy.resetBtn">
+                        Endre cookie-innstillinger
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="footer-logo" href="index.html">
+                        <img class="footer-logo-img" src="data/images/logos/silomax_logo_ensilering.png" alt="Silomax Ensilering">
+                    </a>
+                    <p class="footer-tagline" data-i18n-html="footer.tagline">
+                        <strong>Kontrollert ensilering – fra gras til verdi.</strong> Bevist pålitelig under norske forhold i tiår.
+                    </p>
+                    <div class="footer-badges">
+                        <span class="footer-badge" data-i18n="footer.badge1">EFSA-godkjent</span>
+                        <span class="footer-badge" data-i18n="footer.badge2">Øko driftsmiddel</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="footer.products">Produkter</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="iq.html#oversikt">
+                                <span class="product-dot product-dot-iq"></span>
+                                Silomax IQ
+                                <span class="footer-meta" data-i18n="footer.iqMeta">20–35% TS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stabil.html#oversikt">
+                                <span class="product-dot product-dot-stabil"></span>
+                                Silomax STABIL
+                                <span class="footer-meta" data-i18n="footer.stabilMeta">28–55% TS</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="footer.links">Snarveier</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#produkter" data-i18n="footer.linkProducts">Produkter</a></li>
+                        <li><a href="index.html#tilbakemeldinger" data-i18n="footer.linkFeedback">Erfaringer</a></li>
+                        <li><a href="faq.html" data-i18n="footer.linkFaq">Ofte stilte spørsmål (FAQ)</a></li>
+                        <li><a href="personvern.html" data-i18n="footer.linkPrivacy">Personvern</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2004 – 2026 Silomax. <span data-i18n="footer.rights">Alle rettigheter forbeholdt</span> Forbruksvarer AS</p>
+                <p class="footer-bottom-note" data-i18n="footer.note">Utviklet for norske forhold</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

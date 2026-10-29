@@ -224,6 +224,10 @@
     }
 }
 
+.nav-wrap:not(:has(.nav a.active)) .bubble.active {
+    opacity: 0;
+}
+
 /* Show the dark hover droplet ONLY when hovering a non-active link;
    disappears immediately when clicking (becomes .active) or moving mouse away */
 .nav-wrap:has(.nav a:not(.active):hover) .bubble.hover {
