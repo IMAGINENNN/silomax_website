@@ -80,7 +80,7 @@ const SILOMAX_I18N = {
         "faq.a6.p3": "Hittil har ingen enzym blitt godkjent av EU som ensileringstilsetning, i doser som gjenspeiler faktisk praksis.",
 
         // Footer
-        "footer.tagline": "<strong>Kontrollert ensilering – fra gras til verdi.</strong> Bevist pålitelig under norske forhold i tiår.",
+        "footer.tagline": "<strong>Ensileringsproffer bruker SILOMAX.</strong> SILOMAX viser det fulle potensialet til mikroorganismer og gjæring.",
         "footer.badge1": "EFSA-godkjent",
         "footer.badge2": "Øko driftsmiddel",
         "footer.products": "Produkter",
@@ -194,7 +194,7 @@ const SILOMAX_I18N = {
         "faq.a6.p3": "To date, no enzyme has been approved by the EU as a silage additive at dosages that reflect actual farm practice.",
 
         // Footer
-        "footer.tagline": "<strong>Controlled ensiling – from grass to value.</strong> Proven reliable under Norwegian conditions for decades.",
+        "footer.tagline": "<strong>Ensiling professionals use SILOMAX.</strong> SILOMAX unlocks the full potential of microorganisms and fermentation.",
         "footer.badge1": "EFSA Approved",
         "footer.badge2": "Organic Approved",
         "footer.products": "Products",
