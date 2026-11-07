@@ -1,3 +1,17 @@
+@media (min-width: 1024px) {
+    .container-diagram {
+        max-width: 1024px;
+    }
+
+    .diagram-card {
+        max-width: 864px;
+    }
+
+    .text {
+        max-width: 864px;
+    }
+}
+
 @media (max-width: 1024px) {
     .item-product {
         gap: 2.25rem;
