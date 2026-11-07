@@ -47,6 +47,10 @@ section[id] {
     text-wrap: balance;
 }
 
+/* 
+
+    Accent feature (inactive)
+
 .hero-accent {
     background: linear-gradient(
         105deg,
@@ -57,7 +61,7 @@ section[id] {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
+}*/
 
 .product-header-second {
     margin: 0;
