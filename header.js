@@ -1,6 +1,6 @@
 const SILOMAX_I18N = {
     no: {
-        "nav.home": "HOME",
+        "nav.home": "HJEM",
         "nav.faq": "FAQ",
 
         // Home page
@@ -280,7 +280,7 @@ function disableGoogleAnalytics() {
 
 function getPageSlug(pathname) {
     const clean = pathname.replace(/\/+$/, "");
-    if (clean === "" || clean.endsWith("/index.html") || clean.endsWith("/home")) return "home";
+    if (clean === "" || clean.endsWith("/index.html") || clean.endsWith("/hjem") || clean.endsWith("/home")) return "hjem";
     if (clean.endsWith("/iq.html") || clean.endsWith("/iq")) return "iq";
     if (clean.endsWith("/stabil.html") || clean.endsWith("/stabil")) return "stabil";
     if (clean.endsWith("/faq.html") || clean.endsWith("/faq")) return "faq";
