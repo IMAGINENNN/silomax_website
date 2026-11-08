@@ -289,30 +289,47 @@ function getPageSlug(pathname) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Main Navigation Active & Hover Droplet Logic + Clean URLs (/home, /iq, /stabil, /faq)
+    // 1. Main Navigation Active & Hover Droplet Logic + Clean URLs (/hjem, /iq, /stabil, /faq)
     const mainNavLinks = document.querySelectorAll(".nav:not(.lang-nav) a");
+    const activeBubble = document.querySelector(".nav-container .bubble.active");
+    const langActiveBubble = document.querySelector(".lang-wrap .bubble.active");
     const currentPath = window.location.pathname;
     const currentSlug = getPageSlug(currentPath);
+    const fromSlug = sessionStorage.getItem("silomax_nav_from");
+    sessionStorage.removeItem("silomax_nav_from");
 
+    const linkBySlug = new Map();
     mainNavLinks.forEach(link => {
         const linkPath = new URL(link.getAttribute("href"), window.location.href).pathname;
         const linkSlug = getPageSlug(linkPath);
-        const isMatch = linkSlug === currentSlug;
+        linkBySlug.set(linkSlug, link);
+    });
 
-        link.classList.toggle("active", isMatch);
-        if (isMatch) {
-            link.classList.add("is-hovered");
-        }
+    const targetLink = linkBySlug.get(currentSlug);
+    const startLink = fromSlug && fromSlug !== currentSlug ? linkBySlug.get(fromSlug) : null;
+
+    if (activeBubble) {
+        activeBubble.style.transition = "none";
+    }
+    if (langActiveBubble) {
+        langActiveBubble.style.transition = "none";
+    }
+
+    mainNavLinks.forEach(link => {
+        const isInitialActive = startLink ? link === startLink : link === targetLink;
+        link.classList.toggle("active", isInitialActive);
+        link.classList.toggle("is-hovered", link === targetLink);
 
         link.addEventListener("mouseenter", () => {
             mainNavLinks.forEach(item => item.classList.remove("is-hovered"));
             link.classList.add("is-hovered");
         });
+    });
 
-        link.addEventListener("click", () => {
-            mainNavLinks.forEach(item => item.classList.remove("active"));
-            link.classList.add("active");
-        });
+    // Save current page slug before navigating to another page so the navbar droplet
+    // slides in one uninterrupted motion on the destination page.
+    window.addEventListener("pagehide", () => {
+        sessionStorage.setItem("silomax_nav_from", currentSlug);
     });
 
     // Rewrite browser URL bar to clean paths (/home, /iq, /stabil, /faq, /personvern)
@@ -445,6 +462,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     applyLanguage(currentLang);
+
+    // Commit initial bubble positions after language text is applied, then animate smoothly
+    requestAnimationFrame(() => {
+        if (activeBubble) {
+            void activeBubble.offsetWidth;
+            activeBubble.style.transition = "";
+        }
+        if (langActiveBubble) {
+            void langActiveBubble.offsetWidth;
+            langActiveBubble.style.transition = "";
+        }
+        if (startLink && targetLink) {
+            startLink.classList.remove("active");
+            targetLink.classList.add("active");
+        }
+    });
 
     // 3. Smooth scroll for same-page anchor links
     document.querySelectorAll('a[href*="#"]').forEach(anchor => {
