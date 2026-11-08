@@ -278,17 +278,26 @@ function disableGoogleAnalytics() {
     }
 }
 
+function getPageSlug(pathname) {
+    const clean = pathname.replace(/\/+$/, "");
+    if (clean === "" || clean.endsWith("/index.html") || clean.endsWith("/home")) return "home";
+    if (clean.endsWith("/iq.html") || clean.endsWith("/iq")) return "iq";
+    if (clean.endsWith("/stabil.html") || clean.endsWith("/stabil")) return "stabil";
+    if (clean.endsWith("/faq.html") || clean.endsWith("/faq")) return "faq";
+    if (clean.endsWith("/personvern.html") || clean.endsWith("/personvern")) return "personvern";
+    return clean;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Main Navigation Active & Hover Droplet Logic
+    // 1. Main Navigation Active & Hover Droplet Logic + Clean URLs (/home, /iq, /stabil, /faq)
     const mainNavLinks = document.querySelectorAll(".nav:not(.lang-nav) a");
     const currentPath = window.location.pathname;
+    const currentSlug = getPageSlug(currentPath);
 
     mainNavLinks.forEach(link => {
         const linkPath = new URL(link.getAttribute("href"), window.location.href).pathname;
-        const isHome =
-            (currentPath === "/" || currentPath.endsWith("/index.html")) &&
-            linkPath.endsWith("/index.html");
-        const isMatch = linkPath === currentPath || isHome;
+        const linkSlug = getPageSlug(linkPath);
+        const isMatch = linkSlug === currentSlug;
 
         link.classList.toggle("active", isMatch);
         if (isMatch) {
@@ -305,6 +314,19 @@ document.addEventListener("DOMContentLoaded", () => {
             link.classList.add("active");
         });
     });
+
+    // Rewrite browser URL bar to clean paths (/home, /iq, /stabil, /faq, /personvern)
+    if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+        const baseDir = currentPath.replace(/\/[^/]*$/, "");
+        const targetCleanPath = `${baseDir}/${currentSlug}`;
+        if (currentPath !== targetCleanPath) {
+            window.history.replaceState(
+                null,
+                "",
+                targetCleanPath + window.location.search + window.location.hash
+            );
+        }
+    }
 
     // 2. Language Switcher (NO / EN) Logic
     // Capture the live HTML/text directly from the DOM as the source of truth for "no"
@@ -428,10 +450,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('a[href*="#"]').forEach(anchor => {
         anchor.addEventListener("click", event => {
             const url = new URL(anchor.getAttribute("href"), window.location.href);
-            const samePage =
-                url.pathname === window.location.pathname ||
-                ((window.location.pathname === "/" || window.location.pathname.endsWith("/index.html")) &&
-                    url.pathname.endsWith("/index.html"));
+            const samePage = getPageSlug(url.pathname) === currentSlug;
 
             if (samePage && url.hash) {
                 const target = document.querySelector(url.hash);
