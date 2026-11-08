@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <title>Silomax</title>
+    <link rel="icon" type="image/png" href="/data/images/logos/silomax_logo.png">
+    <script>
+        (function () {
+            var p = window.location.pathname.toLowerCase();
+            if (p.indexOf("stabil") !== -1) {
+                window.location.replace("/stabil.html");
+            } else if (p.indexOf("iq") !== -1) {
+                window.location.replace("/iq.html");
+            } else if (p.indexOf("bruksanvisning") !== -1) {
+                window.location.replace("/iq.html#bruksanvisning");
+            } else if (p.indexOf("erfaring") !== -1) {
+                window.location.replace("/index.html#erfaringer");
+            } else if (p.indexOf("sporsmal") !== -1 || p.indexOf("faq") !== -1) {
+                window.location.replace("/faq.html");
+            } else if (p.indexOf("personvern") !== -1) {
+                window.location.replace("/personvern.html");
+            } else {
+                window.location.replace("/index.html");
+            }
+        })();
+    </script>
+</head>
+<body></body>
+</html>
