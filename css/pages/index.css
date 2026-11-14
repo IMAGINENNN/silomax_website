@@ -382,6 +382,14 @@ section[id] {
     margin-block: 1.5rem 1rem;
     min-width: 0;
     max-width: 100%;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: grab;
+}
+
+.container-feedback:active {
+    cursor: grabbing;
 }
 
 .carousel-item {
@@ -395,6 +403,7 @@ section[id] {
     width: 44.5%;
     opacity: 0.45;
     filter: blur(1px);
+    cursor: pointer;
 }
 
 .main-item {
@@ -420,6 +429,7 @@ section[id] {
     z-index: 0;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
 }
 
 .carousel-item-image {
@@ -427,6 +437,8 @@ section[id] {
     border-radius: 1.25rem;
     box-shadow: 0 22px 45px -15px rgba(17, 22, 37, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.8);
+    -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 .carousel-btn {
@@ -475,30 +487,53 @@ section[id] {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    margin-top: 0.5rem;
+    gap: 0.65rem;
+    margin-top: 0.85rem;
+    flex-wrap: wrap;
 }
 
 .carousel-dot {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    border-radius: 50%;
-    border: none;
-    background: rgba(17, 22, 37, 0.22);
+    width: 54px;
+    height: 54px;
+    padding: 2px;
+    border-radius: 0.65rem;
+    border: 2px solid rgba(17, 22, 37, 0.14);
+    background: rgba(255, 255, 255, 0.75);
+    overflow: hidden;
     cursor: pointer;
-    transition: transform 250ms ease, background-color 250ms ease, box-shadow 250ms ease;
+    opacity: 0.55;
+    box-shadow: 0 4px 10px -3px rgba(17, 22, 37, 0.12);
+    transition:
+        transform 250ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 250ms ease,
+        border-color 250ms ease,
+        box-shadow 250ms ease;
+}
+
+.carousel-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.45rem;
+    display: block;
+    pointer-events: none;
+    -webkit-user-drag: none;
 }
 
 .carousel-dot:hover {
-    background: rgba(17, 22, 37, 0.45);
-    transform: scale(1.15);
+    opacity: 0.9;
+    transform: translateY(-2px);
+    border-color: rgba(17, 22, 37, 0.35);
 }
 
 .carousel-dot.active {
-    background: hsl(220, 20%, 24%);
-    transform: scale(1.25);
-    box-shadow: 0 0 0 3px rgba(17, 22, 37, 0.12);
+    opacity: 1;
+    transform: translateY(-2px) scale(1.06);
+    border-color: hsl(265, 45%, 38%);
+    background: #ffffff;
+    box-shadow:
+        0 8px 20px -4px rgba(24, 18, 44, 0.25),
+        0 0 0 3px hsla(265, 45%, 45%, 0.16);
 }
 
 @media (max-width: 768px) {
@@ -564,5 +599,19 @@ section[id] {
         height: 38px;
         width: 38px;
         font-size: 0.95rem;
+    }
+
+    .carousel-dots {
+        gap: 0.45rem;
+    }
+
+    .carousel-dot {
+        width: 42px;
+        height: 42px;
+        border-radius: 0.5rem;
+    }
+
+    .carousel-thumb {
+        border-radius: 0.35rem;
     }
 }
