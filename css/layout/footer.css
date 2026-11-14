@@ -112,6 +112,39 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
+.footer-youtube {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    margin-top: 0.15rem;
+    padding: 0.36rem 0.85rem 0.36rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition: transform 200ms ease, background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease, color 200ms ease;
+}
+
+.footer-youtube:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.32);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px -4px rgba(255, 0, 0, 0.32);
+}
+
+.footer-youtube-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: block;
+}
+
 .footer-col {
     display: flex;
     flex-direction: column;

@@ -5,7 +5,7 @@
 @import url("components/item.css");
 
 @import url("layout/header.css");
-@import url("layout/footer.css");
+@import url("layout/footer.css?v=3");
 @import url("layout/container.css");
 
 @import url("pages/faq.css");
