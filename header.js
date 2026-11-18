@@ -25,10 +25,10 @@ const SILOMAX_I18N = {
         "iq.b3": "Kan anvendes i <span class=\"purple\">økologisk produksjon</span>",
         "iq.b4": "<span class=\"purple\">Høyere proteinverdi</span> og AAT",
         "iq.b5": "<span class=\"purple\">Suveren smakelighet</span>",
-        "iq.diag1.top": "En naturlig fermentering av gress kan ta fra 2–6 uker.<br><strong>SILOMAX IQ</strong> vil fermentere gresset på <span class=\"purple\">1–2 dager</span>.",
-        "iq.diag1.bottom": "Forsøk viser at <strong>SILOMAX IQ</strong> kan <span class=\"purple\">erstatte 1,39 kg kraftfôr</span>, og gir <span class=\"purple\">1,1 liter mer melk</span> per dyr og dag mot kontroll.",
-        "iq.diag2.top": "<strong>SILOMAX IQ</strong> <span class=\"purple\">reduserer proteinnedbrytning</span> i ensilasje.",
-        "iq.diag2.bottom": "Mer protein bevares – gir <span class=\"purple\">mer energi og melk</span> fra samme fôr.",
+        "iq.diag1.top": "<strong>SILOMAX IQ</strong> <span class=\"purple\">reduserer proteinnedbrytning</span> i ensilasje.",
+        "iq.diag1.bottom": "Mer protein bevares – gir <span class=\"purple\">mer energi og melk</span> fra samme fôr.",
+        "iq.diag2.top": "En naturlig fermentering av gress kan ta fra 2–6 uker.<br><strong>SILOMAX IQ</strong> vil fermentere gresset på <span class=\"purple\">1–2 dager</span>.",
+        "iq.diag2.bottom": "Forsøk viser at <strong>SILOMAX IQ</strong> kan <span class=\"purple\">erstatte 1,39 kg kraftfôr</span>, og gir <span class=\"purple\">1,1 liter mer melk</span> per dyr og dag mot kontroll.",
         "iq.inst.subtitle": "Slik klargjør og bruker du Silomax IQ for optimal ensilering",
 
         // STABIL page
@@ -76,7 +76,6 @@ const SILOMAX_I18N = {
         "faq.a4.p1": "Siden høsteforholdene er så forskjellige, er det ikke mulig å utvikle ett allsidig produkt. Fremfor alt spiller <span class=\"purple\">tørrstoffinnholdet</span> i graset en avgjørende rolle ved valg av <strong>riktig kombinasjon av bakteriestammer</strong>.",
         "faq.q5": "Hvor utbredt er SILOMAX?",
         "faq.a5.p1": "Sammensetningen av bakterier er unik, <span class=\"purple\">spesialutviklet for Norge</span>, og selges kun her. Bakteriestammene inngår også i det som samlet sett er <strong>Europas mest brukte ensileringsmidler</strong>.",
-        "faq.a5.p2": "Totalt behandlet disse midlene ca. <span class=\"purple\">48 millioner tonn</span> i 2020 – hvorav ca. <strong>420 000 tonn i Norge</strong>.",
         "faq.q6": "Kan melkesyrebakterier kombineres med enzymer?",
         "faq.a6.p1": "Nei.",
         "faq.a6.p2": "Mengden enzymer som kreves for å oppnå en beviselig effekt, vil være for høy. Denne tilnærmingen ville ikke være økonomisk.",
@@ -142,10 +141,10 @@ const SILOMAX_I18N = {
         "iq.b3": "Approved for use in <span class=\"purple\">organic production</span>",
         "iq.b4": "<span class=\"purple\">Higher protein value</span> and AAT",
         "iq.b5": "<span class=\"purple\">Superior palatability</span>",
-        "iq.diag1.top": "Natural grass fermentation can take from 2–6 weeks.<br><strong>SILOMAX IQ</strong> ferments the grass in <span class=\"purple\">1–2 days</span>.",
-        "iq.diag1.bottom": "Trials show that <strong>SILOMAX IQ</strong> can <span class=\"purple\">replace 1.39 kg of concentrate</span>, and yields <span class=\"purple\">1.1 liters more milk</span> per animal per day vs. control.",
-        "iq.diag2.top": "<strong>SILOMAX IQ</strong> <span class=\"purple\">reduces protein breakdown</span> in silage.",
-        "iq.diag2.bottom": "More protein is preserved – yielding <span class=\"purple\">more energy and milk</span> from the same forage.",
+        "iq.diag1.top": "<strong>SILOMAX IQ</strong> <span class=\"purple\">reduces protein breakdown</span> in silage.",
+        "iq.diag1.bottom": "More protein is preserved – yielding <span class=\"purple\">more energy and milk</span> from the same forage.",
+        "iq.diag2.top": "Natural grass fermentation can take from 2–6 weeks.<br><strong>SILOMAX IQ</strong> ferments the grass in <span class=\"purple\">1–2 days</span>.",
+        "iq.diag2.bottom": "Trials show that <strong>SILOMAX IQ</strong> can <span class=\"purple\">replace 1.39 kg of concentrate</span>, and yields <span class=\"purple\">1.1 liters more milk</span> per animal per day vs. control.",
         "iq.inst.subtitle": "How to prepare and apply Silomax IQ for optimal ensiling",
 
         // STABIL page
@@ -193,7 +192,6 @@ const SILOMAX_I18N = {
         "faq.a4.p1": "Because harvest conditions vary significantly, it is not possible to develop a single universal product. Above all, the <span class=\"purple\">dry matter content</span> of the crop plays a decisive role in choosing the <strong>right combination of bacterial strains</strong>.",
         "faq.q5": "How widely used is SILOMAX?",
         "faq.a5.p1": "The bacterial composition is unique, <span class=\"purple\">specifically developed for Norway</span>, and sold exclusively here. All the bacterial strains are also part of what are collectively <strong>Europe's most widely used silage inoculants</strong>.",
-        "faq.a5.p2": "In total, these inoculants treated approximately <span class=\"purple\">48 million tonnes</span> in 2020 – including around <strong>420,000 tonnes in Norway</strong>.",
         "faq.q6": "Can lactic acid bacteria be combined with enzymes?",
         "faq.a6.p1": "No.",
         "faq.a6.p2": "The amount of enzymes required to achieve a proven effect would be too high. Such an approach would not be economical.",
@@ -216,7 +214,7 @@ const SILOMAX_I18N = {
         "footer.linkFaq": "Frequently Asked Questions (FAQ)",
         "footer.linkPrivacy": "Privacy",
         "footer.rights": "All rights reserved",
-        "footer.note": "Developed for Norwegian conditions",
+        "footer.note": "Perfect silage, even under the toughest conditions.",
 
         // Cookie Banner & Privacy Page
         "cookie.text": "We use cookies (Google Analytics) to analyze traffic and improve our website. Scripts are blocked until you give your consent. <a href=\"personvern.html\">Read our privacy policy</a>.",
